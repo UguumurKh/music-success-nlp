@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1152pt" height="648pt" viewBox="0 0 1152 648" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-02T20:58:02.273977</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 648 
+L 1152 648 
+L 1152 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="text_1">
+   <text style="font-weight: 700; font-size: 29px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142d4e" x="51.84" y="42.12" transform="rotate(-0 51.84 42.12)">What did the historical cleaning actually change?</text>
+  </g>
+  <g id="text_2">
+   <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #63758a" x="51.84" y="74.52" transform="rotate(-0 51.84 74.52)">DOCUMENTED EXAMPLES  |  Raw → Stage 10 clean → Stage 11 corrected; counts are whitespace tokens</text>
+  </g>
+  <g id="text_3">
+   <text style="font-weight: 700; font-size: 22px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142d4e" x="57.6" y="129.6" transform="rotate(-0 57.6 129.6)">Bring Out The Freak In You</text>
+  </g>
+  <g id="text_4">
+   <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #63758a" x="57.6" y="155.52" transform="rotate(-0 57.6 155.52)">Lil Rob  |  Structural-label cleaning</text>
+  </g>
+  <g id="text_5">
+   <text style="font-weight: 700; font-size: 26px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #087f80" x="57.6" y="197.64" transform="rotate(-0 57.6 197.64)">386 → 375 → 375</text>
+  </g>
+  <g id="text_6">
+   <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142d4e" x="57.6" y="236.52" transform="rotate(-0 57.6 236.52)">[Chorus] → line removed</text>
+  </g>
+  <g id="text_7">
+   <text style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #142d4e" transform="translate(57.6 271.819609)">Seven label lines removed;</text>
+   <text style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #142d4e" transform="translate(57.6 294.84)">chorus completeness is not established.</text>
+  </g>
+  <g id="text_8">
+   <text style="font-weight: 700; font-size: 22px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142d4e" x="622.08" y="129.6" transform="rotate(-0 622.08 129.6)">Animals</text>
+  </g>
+  <g id="text_9">
+   <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #63758a" x="622.08" y="155.52" transform="rotate(-0 622.08 155.52)">Martin Garrix  |  Standalone music-note removal</text>
+  </g>
+  <g id="text_10">
+   <text style="font-weight: 700; font-size: 26px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #087f80" x="622.08" y="197.64" transform="rotate(-0 622.08 197.64)">10 → 8 → 8</text>
+  </g>
+  <g id="text_11">
+   <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142d4e" x="622.08" y="236.52" transform="rotate(-0 622.08 236.52)">♪ → line removed</text>
+  </g>
+  <g id="text_12">
+   <text style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #142d4e" transform="translate(622.08 271.04)">Two note-only lines removed;</text>
+   <text style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #142d4e" transform="translate(622.08 294.84)">uncertain repeated vocals remain.</text>
+  </g>
+  <g id="text_13">
+   <text style="font-weight: 700; font-size: 22px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142d4e" x="57.6" y="349.92" transform="rotate(-0 57.6 349.92)">A.M.</text>
+  </g>
+  <g id="text_14">
+   <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #63758a" x="57.6" y="375.84" transform="rotate(-0 57.6 375.84)">One Direction  |  Supported whole-block correction</text>
+  </g>
+  <g id="text_15">
+   <text style="font-weight: 700; font-size: 26px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #087f80" x="57.6" y="417.96" transform="rotate(-0 57.6 417.96)">642 → 640 → 320</text>
+  </g>
+  <g id="text_16">
+   <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142d4e" x="57.6" y="456.84" transform="rotate(-0 57.6 456.84)">[block A][block A] → [block A]</text>
+  </g>
+  <g id="text_17">
+   <text style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #142d4e" transform="translate(57.6 489.713125)">Block notation is schematic. Only this</text>
+   <text style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #142d4e" transform="translate(57.6 515.16)">confirmed case was shortened.</text>
+  </g>
+  <g id="text_18">
+   <text style="font-weight: 700; font-size: 22px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142d4e" x="622.08" y="349.92" transform="rotate(-0 622.08 349.92)">DDU-DU DDU-DU</text>
+  </g>
+  <g id="text_19">
+   <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #63758a" x="622.08" y="375.84" transform="rotate(-0 622.08 375.84)">BLACKPINK  |  Multilingual content retained</text>
+  </g>
+  <g id="text_20">
+   <text style="font-weight: 700; font-size: 26px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #087f80" x="622.08" y="417.96" transform="rotate(-0 622.08 417.96)">316 → 314 → 314</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142d4e" x="622.08" y="456.84" transform="rotate(-0 622.08 456.84)">♪ → removed; Korean + Latin text stays</text>
+  </g>
+  <g id="text_22">
+   <text style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #142d4e" transform="translate(622.08 491.36)">Detector label = en: remained eligible.</text>
+   <text style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #142d4e" transform="translate(622.08 515.16)">Mixed-language flag = true.</text>
+  </g>
+  <g id="text_23">
+   <text style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #142d4e" transform="translate(51.84 582.749063)">Historical cleaning examples, not new analytical findings. Stage 11 preserves within-block choruses.</text>
+   <text style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #142d4e" transform="translate(51.84 605.249063)">Uncertain encoding problems were flagged, not repaired; these marker examples make no encoding-repair claim.</text>
+  </g>
+ </g>
+</svg>

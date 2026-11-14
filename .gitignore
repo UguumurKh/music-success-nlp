@@ -1,0 +1,29 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Source and derived datasets must never be committed.
+data/raw/*
+data/interim/*
+data/processed/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+.venv/
+*.pyc
+
+# Local manual review contains copyrighted complete lyrics.
+/reports/manual_lyric_review.xlsx
+/reports/manual_lyric_review_*.txt
+/reports/full_block_repetition_review.xlsx
+/reports/full_block_repetition_review_*.txt
+/reports/final_integrated_dataset_preview.xlsx
+/reports/final_integrated_dataset_preview_*.txt
+/reports/variant_collision_review.csv

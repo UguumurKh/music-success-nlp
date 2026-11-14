@@ -1,0 +1,1 @@
+source_row,id,name,album_name,artists,danceability,energy,key,loudness,mode,speechiness,acousticness,instrumentalness,liveness,valence,tempo,duration_ms,lyrics_missing,lyrics_blank,lyric_word_count,lyric_sha256,title_norm,artist_norm,removed_as_exact_duplicate,duplicate_id_conflict

@@ -1,0 +1,279 @@
+{
+  "runtime": {
+    "python": "3.12.14",
+    "polars": "2.0.0"
+  },
+  "datasets": {
+    "Billboard": {
+      "input_rows": 355658,
+      "output_rows": 11008,
+      "exact_duplicates_removed": 0,
+      "unresolved_duplicate_groups": 13,
+      "unresolved_duplicate_rows": 26,
+      "quarantined_song_count": 1,
+      "quarantined_weekly_rows": 57,
+      "invalid_quarantined_rows": 0,
+      "songs_before_period_filter": 32676,
+      "songs_excluded_by_first_chart_date": 21668,
+      "weekly_rows_excluded_by_first_chart_date": 224868,
+      "weekly_rows_represented_in_output": 130733,
+      "top10_songs": 1433,
+      "top10_pct": 13.017805232558139,
+      "chart_weeks": {
+        "mean": 11.876180959302326,
+        "median": 9.0,
+        "min": 1,
+        "max": 112
+      },
+      "missingness": {
+        "title_null": 0,
+        "title_blank": 0,
+        "title_unusable_normalized": 0,
+        "artist_null": 0,
+        "artist_blank": 0,
+        "artist_unusable_normalized": 0
+      },
+      "normalization_collisions": {
+        "title": {
+          "collision_groups": 51,
+          "affected_records": 145,
+          "distinct_raw_variants": 103,
+          "review_file": "reports/billboard_title_normalization_collisions.csv"
+        },
+        "artist": {
+          "collision_groups": 2,
+          "affected_records": 4,
+          "distinct_raw_variants": 4,
+          "review_file": "reports/billboard_artist_normalization_collisions.csv"
+        },
+        "title_artist": {
+          "collision_groups": 1,
+          "affected_records": 2,
+          "distinct_raw_variants": 2,
+          "review_file": "reports/billboard_title_artist_normalization_collisions.csv"
+        }
+      },
+      "exclusion_records": 224925,
+      "output_columns": {
+        "Song": "String",
+        "Artist": "String",
+        "first_chart_date": "Date",
+        "last_chart_date": "Date",
+        "chart_weeks": "UInt32",
+        "peak_rank": "Int64",
+        "weekly_records_after_exact_dedup": "UInt32",
+        "raw_weekly_records": "UInt32",
+        "top10": "Int8",
+        "number_one": "Int8",
+        "title_norm": "String",
+        "artist_norm": "String"
+      }
+    },
+    "Grammy": {
+      "input_rows": 25535,
+      "output_rows": 150,
+      "exact_duplicates_removed": 14,
+      "other_award_rows_excluded": 25149,
+      "out_of_period_soty_rows_excluded": 222,
+      "nominee_records_including_winners": 150,
+      "winner_records": 25,
+      "winner_missing": 0,
+      "performer_review_required": 150,
+      "unresolved_year_title_artist_groups": 0,
+      "missingness": {
+        "title_null": 0,
+        "title_blank": 0,
+        "title_unusable_normalized": 0,
+        "artist_null": 150,
+        "artist_blank": 0,
+        "artist_unusable_normalized": 150
+      },
+      "normalization_collisions": {
+        "title": {
+          "collision_groups": 0,
+          "affected_records": 0,
+          "distinct_raw_variants": 0,
+          "review_file": "reports/grammy_title_normalization_collisions.csv"
+        },
+        "artist": {
+          "collision_groups": 0,
+          "affected_records": 0,
+          "distinct_raw_variants": 0,
+          "review_file": "reports/grammy_artist_normalization_collisions.csv"
+        },
+        "title_artist": {
+          "collision_groups": 0,
+          "affected_records": 0,
+          "distinct_raw_variants": 0,
+          "review_file": "reports/grammy_title_artist_normalization_collisions.csv"
+        }
+      },
+      "exclusion_records": 25385,
+      "output_columns": {
+        "source_row": "UInt32",
+        "annual_edition": "Int64",
+        "year": "Int64",
+        "award": "String",
+        "artist": "String",
+        "artist_link": "String",
+        "producers": "String",
+        "song_or_album": "String",
+        "url": "String",
+        "winner": "Boolean",
+        "grammy_nominated": "Int8",
+        "grammy_winner": "Int8",
+        "title_norm": "String",
+        "artist_norm": "String"
+      }
+    },
+    "Spotify": {
+      "input_rows": 955320,
+      "output_rows": 955320,
+      "exact_duplicates_removed": 0,
+      "duplicate_id_groups_before_dedup": 0,
+      "duplicate_id_rows_before_dedup": 0,
+      "duplicate_id_excess_before_dedup": 0,
+      "unresolved_duplicate_id_groups": 0,
+      "unresolved_duplicate_id_rows": 0,
+      "unusable_ids": 0,
+      "lyrics_missing": 0,
+      "lyrics_blank": 13,
+      "missingness": {
+        "title_null": 0,
+        "title_blank": 9,
+        "title_unusable_normalized": 61,
+        "artist_null": 0,
+        "artist_blank": 0,
+        "artist_unusable_normalized": 78
+      },
+      "normalization_collisions": {
+        "title": {
+          "collision_groups": 31008,
+          "affected_records": 206787,
+          "distinct_raw_variants": 67547,
+          "review_file": "reports/spotify_title_normalization_collisions.csv"
+        },
+        "artist": {
+          "collision_groups": 1954,
+          "affected_records": 27279,
+          "distinct_raw_variants": 3937,
+          "review_file": "reports/spotify_artist_normalization_collisions.csv"
+        },
+        "title_artist": {
+          "collision_groups": 11954,
+          "affected_records": 29829,
+          "distinct_raw_variants": 24291,
+          "review_file": "reports/spotify_title_artist_normalization_collisions.csv"
+        }
+      },
+      "multiple_version_normalized_groups": 85490,
+      "multiple_version_records": 200066,
+      "exclusion_records": 0,
+      "output_columns": {
+        "source_row": "UInt32",
+        "id": "String",
+        "name": "String",
+        "album_name": "String",
+        "artists": "String",
+        "danceability": "Float64",
+        "energy": "Float64",
+        "key": "String",
+        "loudness": "Float64",
+        "mode": "String",
+        "speechiness": "Float64",
+        "acousticness": "Float64",
+        "instrumentalness": "Float64",
+        "liveness": "Float64",
+        "valence": "Float64",
+        "tempo": "Float64",
+        "duration_ms": "Float64",
+        "lyrics_missing": "Boolean",
+        "lyrics_blank": "Boolean",
+        "lyric_word_count": "UInt32",
+        "lyric_sha256": "String",
+        "title_norm": "String",
+        "artist_norm": "String",
+        "duplicate_id_conflict": "Boolean",
+        "id_unusable": "Boolean"
+      }
+    }
+  },
+  "decisions": [
+    "Strict UTF-8 parsing uses the profiled schemas; Billboard Weeks in Charts remains text to preserve '-'. No parse errors are ignored.",
+    "source_row is the 1-based data-record number (header excluded, multiline CSV records counted once). Exclusion ledgers list every removed source record and reason.",
+    "All raw title/artist columns survive unchanged. Normalization lowercases, uses unidecode, normalizes quotes, replaces punctuation with spaces and collapses whitespace. Version words and artist ordering remain. No base-title key is used.",
+    "Normalization collision reports cover each final source table separately, exclude missing/empty normalized keys, and distinguish raw spelling collisions from repeated versions. No normalization collision is resolved automatically.",
+    "Billboard removes only fully identical rows, then quarantines entire raw song–artist histories with any non-identical duplicate date key or invalid required field. This avoids shifting first-chart dates or undercounting histories. Duplicate review exports all conflicting rows, even outside the target period.",
+    "Billboard aggregates raw Song/Artist across all available dates before filtering first_chart_date to 2000–2024. Chart weeks count distinct dates. Outcomes include subsequent observed weeks through the source end, including after 2024; histories near the source end may be right-censored. raw_weekly_records includes any original exact duplicates, while weekly_records_after_exact_dedup does not.",
+    "Grammy exact duplicates are removed before selecting Song Of The Year and award years 2000–2024. Nominees are nomination records including winners. All source columns survive; artists are never inferred from contributors. Every retained nomination is exported for performer review.",
+    "Spotify has no year filter. All source metadata/audio values retain their types and values, including mixed text key/mode coding. Lyrics are neither normalized nor stored; only missing/blank flags, whitespace word count and SHA-256 of the exact UTF-8 content are retained. Null lyrics have null count/hash; blanks have zero words.",
+    "Spotify duplicate IDs are compared on all original fields, including exact lyric text in a filtered duplicate-only scan. Only equivalent copies are removed. Conflicting IDs remain flagged; absent/blank IDs remain flagged and are never treated as an identity for deduplication.",
+    "No cross-source matching, fuzzy matching, NLP feature extraction beyond the requested lyric word count/hash, or modelling has been performed."
+  ],
+  "risks": [
+    "Billboard conflicting weekly records require manual review; raw song–artist strings can still combine different recordings or split spelling variants.",
+    "Grammy performer identities may be absent while contributors are present. No performer inference is authorized yet.",
+    "Spotify normalized keys often represent multiple track IDs/versions; neither normalized equality nor lyric-hash equality proves identity.",
+    "Spotify cannot be limited to 2000–2024 from this metadata. Named/numeric key and mode encodings and profiled loudness outliers are preserved for later review.",
+    "Normalization is lossy; missing/empty normalized keys are not usable matching keys. Collision files are review evidence, never merge instructions."
+  ],
+  "outputs": [
+    "data/interim/billboard_song_level_2000_2024.parquet",
+    "reports/billboard_duplicate_review.csv",
+    "reports/billboard_exclusions.csv",
+    "reports/billboard_title_normalization_collisions.csv",
+    "reports/billboard_artist_normalization_collisions.csv",
+    "reports/billboard_title_artist_normalization_collisions.csv",
+    "data/interim/grammy_soty_2000_2024.parquet",
+    "reports/grammy_performer_review.csv",
+    "reports/grammy_exclusions.csv",
+    "reports/grammy_title_normalization_collisions.csv",
+    "reports/grammy_artist_normalization_collisions.csv",
+    "reports/grammy_title_artist_normalization_collisions.csv",
+    "reports/spotify_multiple_versions_review.csv",
+    "data/interim/spotify_track_index.parquet",
+    "reports/spotify_duplicate_id_review.csv",
+    "reports/spotify_exclusions.csv",
+    "reports/spotify_title_normalization_collisions.csv",
+    "reports/spotify_artist_normalization_collisions.csv",
+    "reports/spotify_title_artist_normalization_collisions.csv",
+    "reports/preparation_summary.md",
+    "reports/preparation_summary.json"
+  ],
+  "validation": {
+    "before": {
+      "Spotify": {
+        "size_bytes": 1545144675,
+        "sha256": "698efaddfa802e1ba60010eaabcbb138bc017291f34bebaddb22f33ff490bd63"
+      },
+      "Billboard": {
+        "size_bytes": 38358645,
+        "sha256": "d34b5b480cad9836e8d74e7dcc6408c814387c378d4e5ffa5ded4406700190c4"
+      },
+      "Grammy": {
+        "size_bytes": 4196575,
+        "sha256": "6211e1a9292eaabc454b77e83e8ad2d016df311f2a21ccc00c051d7885c2e803"
+      }
+    },
+    "after": {
+      "Spotify": {
+        "size_bytes": 1545144675,
+        "sha256": "698efaddfa802e1ba60010eaabcbb138bc017291f34bebaddb22f33ff490bd63"
+      },
+      "Billboard": {
+        "size_bytes": 38358645,
+        "sha256": "d34b5b480cad9836e8d74e7dcc6408c814387c378d4e5ffa5ded4406700190c4"
+      },
+      "Grammy": {
+        "size_bytes": 4196575,
+        "sha256": "6211e1a9292eaabc454b77e83e8ad2d016df311f2a21ccc00c051d7885c2e803"
+      }
+    },
+    "raw_unchanged": true,
+    "matches_profile_fingerprints": true,
+    "parquet_roundtrips_passed": true,
+    "input_count_checks_passed": true,
+    "exclusion_accounting_passed": true,
+    "lyrics_excluded_from_outputs": true
+  }
+}

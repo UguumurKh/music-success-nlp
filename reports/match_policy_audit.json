@@ -1,0 +1,648 @@
+{
+  "decisions": [
+    "Exact relationships are accepted only outside source-key collisions. Collision identity is the raw title plus raw artist/parsed performer, within each source. Grammy year alone does not make a new identity. Exact keys and Tier-1 title/primary keys are audited across all source records, including records already exact-matched.",
+    "Exact source collisions block both exact and Tier-1 acceptance. Tier-1 source collisions block Tier 1 only. The collision CSV lists all flagged source/rule rows, even where no candidate is available; candidate impact counts are separately reported. Sing and Sing! stay separate and both are quarantined.",
+    "Safe Tier 1 requires complete normalized title equality and either one usable explicit feature suffix with primary equal to the other complete artist, or equal primary and featured suffixes on both sides. No comma, ampersand, and, x or semicolon splitting is used.",
+    "All Tier 2/3 evidence is rejected from the primary candidate set. Taylor's Version, other possessive version labels, remixes, live/acoustic/instrumental and other versions remain part of complete accepted title keys. Earlier variant files are unchanged.",
+    "Accepted Parquets contain one source–Spotify-ID relationship per row, original source fields, all methods, strongest method and exact/safe-Tier-1 indicators. They intentionally do not select a metadata row from Spotify. Diagnostics join every indexed metadata row for every accepted ID. Exact is the strongest METHOD, never a preference for one track ID.",
+    "Consolidation missing-lyrics status takes precedence, including for a single ID, when any lyric flag is missing/blank or hash is null/empty. Otherwise single ID precedes the four multiple-ID categories. Known lyric-hash distinct counts exclude nulls. Audio comparison uses all 12 original fields as a tuple, including null patterns if present; missing audio is separately flagged. Equality of missing patterns is not proof of measured audio equality. Album counts exclude null but preserve literal blanks.",
+    "All 125 existing Billboard–Grammy exact rows are copied unchanged. All additional variant evidence stays in manual review with both full source records, years, gaps, tiers and keys.",
+    "Coverage outcomes are used only after relationship acceptance and consolidation, never to select, rank or reject Spotify candidates. Statistical significance does not measure the practical size of selection bias. These source tables are not random population samples; independence assumptions may fail for repeated artists/works, so inference is exploratory.",
+    "Grammy winner comparisons are descriptive with a difference confidence interval; only 25 winner records make precision limited. No formal winner/non-winner z-test is reported.",
+    "Raw CSVs are never opened. Their size/mtime are checked, not rehashed; all existing non-raw data/report/code inputs are SHA-256 checked before/after. No raw lyrics extraction, fuzzy matching, representative ID selection, audio aggregation or final modelling dataset is performed."
+  ],
+  "outputs": [
+    "data/interim/billboard_spotify_accepted_candidates.parquet",
+    "data/interim/grammy_spotify_accepted_candidates.parquet",
+    "data/interim/billboard_grammy_accepted_pairs.parquet",
+    "reports/tier1_manual_review.csv",
+    "reports/title_version_candidates_not_accepted.csv",
+    "reports/source_normalization_collision_quarantine.csv",
+    "reports/billboard_grammy_variant_manual_review.csv",
+    "reports/billboard_spotify_consolidation_status.csv",
+    "reports/grammy_spotify_consolidation_status.csv",
+    "reports/match_policy_audit.md",
+    "reports/match_policy_audit.json"
+  ],
+  "billboard": {
+    "coverage": {
+      "All": {
+        "total_source_records": 11008,
+        "accepted_exact_only_records": 5886,
+        "exact_only_coverage_pct": 53.47020348837209,
+        "additional_safe_tier1_records": 753,
+        "total_accepted_records": 6639,
+        "accepted_coverage_pct": 60.31068313953488,
+        "exact_collision_quarantined_records": 2,
+        "tier1_collision_flagged_records": 6,
+        "still_unmatched": 4369,
+        "consolidation_distribution": {
+          "single_spotify_id": 3719,
+          "multiple_ids_identical_lyrics_and_audio": 261,
+          "multiple_ids_identical_lyrics_different_audio": 1285,
+          "multiple_ids_different_lyrics_identical_audio": 88,
+          "multiple_ids_different_lyrics_and_audio": 1286,
+          "missing_lyrics_information": 0
+        }
+      },
+      "Top 10": {
+        "total_source_records": 1433,
+        "accepted_exact_only_records": 802,
+        "exact_only_coverage_pct": 55.966503838101886,
+        "additional_safe_tier1_records": 198,
+        "total_accepted_records": 1000,
+        "accepted_coverage_pct": 69.78367062107466,
+        "exact_collision_quarantined_records": 0,
+        "tier1_collision_flagged_records": 1,
+        "still_unmatched": 433,
+        "consolidation_distribution": {
+          "single_spotify_id": 377,
+          "multiple_ids_identical_lyrics_and_audio": 39,
+          "multiple_ids_identical_lyrics_different_audio": 190,
+          "multiple_ids_different_lyrics_identical_audio": 28,
+          "multiple_ids_different_lyrics_and_audio": 366,
+          "missing_lyrics_information": 0
+        }
+      },
+      "Non-Top-10": {
+        "total_source_records": 9575,
+        "accepted_exact_only_records": 5084,
+        "exact_only_coverage_pct": 53.09660574412533,
+        "additional_safe_tier1_records": 555,
+        "total_accepted_records": 5639,
+        "accepted_coverage_pct": 58.89295039164491,
+        "exact_collision_quarantined_records": 2,
+        "tier1_collision_flagged_records": 5,
+        "still_unmatched": 3936,
+        "consolidation_distribution": {
+          "single_spotify_id": 3342,
+          "multiple_ids_identical_lyrics_and_audio": 222,
+          "multiple_ids_identical_lyrics_different_audio": 1095,
+          "multiple_ids_different_lyrics_identical_audio": 60,
+          "multiple_ids_different_lyrics_and_audio": 920,
+          "missing_lyrics_information": 0
+        }
+      }
+    },
+    "policy_counts": {
+      "exact_candidate_rows_quarantined": 2,
+      "exact_source_records_quarantined": 2,
+      "tier1_rows_accepted": 1031,
+      "tier1_rows_manual_review": 3,
+      "tier1_manual_review_sources": 1,
+      "tier1_manual_reasons": [
+        {
+          "policy_reason": "source_normalization_collision",
+          "len": 3
+        }
+      ],
+      "title_version_candidate_rows_not_accepted": 2097,
+      "exact_collision_source_rows": 2,
+      "tier1_collision_source_rows": 6
+    },
+    "accepted_relationships": 11758,
+    "coverage_comparison": {
+      "group1_accepted": 1000,
+      "group1_n": 1433,
+      "group2_accepted": 5639,
+      "group2_n": 9575,
+      "group1_coverage_pct": 69.78367062107466,
+      "group2_coverage_pct": 58.8929503916449,
+      "difference_percentage_points": 10.890720229429762,
+      "risk_ratio": 1.184924004605054,
+      "difference_95pct_ci_percentage_points": [
+        8.271913381445328,
+        13.414555313329934
+      ],
+      "ci_method": "Newcombe hybrid score (independent Wilson intervals, no continuity correction)",
+      "z_statistic": 7.858885148202821,
+      "two_sided_p_value": 3.875673914914118e-15,
+      "null_hypothesis": "equal coverage proportions",
+      "test_method": "pooled two-sample proportion z-test, no continuity correction",
+      "group1_label": "Top 10",
+      "group2_label": "Non-Top-10"
+    }
+  },
+  "grammy": {
+    "coverage": {
+      "All": {
+        "total_source_records": 150,
+        "accepted_exact_only_records": 105,
+        "exact_only_coverage_pct": 70.0,
+        "additional_safe_tier1_records": 6,
+        "total_accepted_records": 111,
+        "accepted_coverage_pct": 74.0,
+        "exact_collision_quarantined_records": 0,
+        "tier1_collision_flagged_records": 0,
+        "still_unmatched": 39,
+        "consolidation_distribution": {
+          "single_spotify_id": 29,
+          "multiple_ids_identical_lyrics_and_audio": 6,
+          "multiple_ids_identical_lyrics_different_audio": 25,
+          "multiple_ids_different_lyrics_identical_audio": 2,
+          "multiple_ids_different_lyrics_and_audio": 49,
+          "missing_lyrics_information": 0
+        }
+      },
+      "Winners": {
+        "total_source_records": 25,
+        "accepted_exact_only_records": 17,
+        "exact_only_coverage_pct": 68.0,
+        "additional_safe_tier1_records": 1,
+        "total_accepted_records": 18,
+        "accepted_coverage_pct": 72.0,
+        "exact_collision_quarantined_records": 0,
+        "tier1_collision_flagged_records": 0,
+        "still_unmatched": 7,
+        "consolidation_distribution": {
+          "single_spotify_id": 4,
+          "multiple_ids_identical_lyrics_and_audio": 0,
+          "multiple_ids_identical_lyrics_different_audio": 3,
+          "multiple_ids_different_lyrics_identical_audio": 0,
+          "multiple_ids_different_lyrics_and_audio": 11,
+          "missing_lyrics_information": 0
+        }
+      },
+      "Non-winning nominees": {
+        "total_source_records": 125,
+        "accepted_exact_only_records": 88,
+        "exact_only_coverage_pct": 70.4,
+        "additional_safe_tier1_records": 5,
+        "total_accepted_records": 93,
+        "accepted_coverage_pct": 74.4,
+        "exact_collision_quarantined_records": 0,
+        "tier1_collision_flagged_records": 0,
+        "still_unmatched": 32,
+        "consolidation_distribution": {
+          "single_spotify_id": 25,
+          "multiple_ids_identical_lyrics_and_audio": 6,
+          "multiple_ids_identical_lyrics_different_audio": 22,
+          "multiple_ids_different_lyrics_identical_audio": 2,
+          "multiple_ids_different_lyrics_and_audio": 38,
+          "missing_lyrics_information": 0
+        }
+      }
+    },
+    "policy_counts": {
+      "exact_candidate_rows_quarantined": 0,
+      "exact_source_records_quarantined": 0,
+      "tier1_rows_accepted": 9,
+      "tier1_rows_manual_review": 0,
+      "tier1_manual_review_sources": 0,
+      "tier1_manual_reasons": [],
+      "title_version_candidate_rows_not_accepted": 27,
+      "exact_collision_source_rows": 0,
+      "tier1_collision_source_rows": 0
+    },
+    "accepted_relationships": 338,
+    "coverage_comparison": {
+      "group1_accepted": 18,
+      "group1_n": 25,
+      "group2_accepted": 93,
+      "group2_n": 125,
+      "group1_coverage_pct": 72.0,
+      "group2_coverage_pct": 74.4,
+      "difference_percentage_points": -2.400000000000002,
+      "risk_ratio": 0.9677419354838709,
+      "difference_95pct_ci_percentage_points": [
+        -23.138228732301965,
+        13.631038250313013
+      ],
+      "ci_method": "Newcombe hybrid score (independent Wilson intervals, no continuity correction)",
+      "group1_label": "Winners",
+      "group2_label": "Non-winning nominees"
+    }
+  },
+  "billboard_grammy": {
+    "accepted_exact_pairs": 125,
+    "manual_variant_rows": 2,
+    "manual_distinct_variant_pairs": 1
+  },
+  "integrity": {
+    "before": {
+      "data/raw/grammies_v4.csv": {
+        "verification": "metadata_only_no_read",
+        "bytes": 4196575,
+        "mtime_ns": 1789425082663706300
+      },
+      "data/raw/hot100.csv": {
+        "verification": "metadata_only_no_read",
+        "bytes": 38358645,
+        "mtime_ns": 1791132196350432200
+      },
+      "data/raw/songs_with_attributes_and_lyrics.csv": {
+        "verification": "metadata_only_no_read",
+        "bytes": 1545144675,
+        "mtime_ns": 1791132772000000000
+      },
+      "data/interim/billboard_grammy_exact_candidates.parquet": {
+        "sha256": "ab13e516e69522388d214a7dd6b144a5f35ea24e89c8d7a39dfbf24cf899dcb1"
+      },
+      "data/interim/billboard_grammy_variant_candidates.parquet": {
+        "sha256": "f23909fdfcc2c0d09a7c69df38e02b49915232acbad5416ebbe17ff2331688bb"
+      },
+      "data/interim/billboard_song_level_2000_2024.parquet": {
+        "sha256": "8eb042aca5dd7a012ce5858c0960290c215a4421102f8d08ca898633d3b60927"
+      },
+      "data/interim/billboard_spotify_exact_candidates.parquet": {
+        "sha256": "4c5b26c50a61b86d63a7c814e7f87c3f3bf95aec62cb0445ad6220716821737b"
+      },
+      "data/interim/billboard_spotify_variant_candidates.parquet": {
+        "sha256": "873d2c25a44a7ca4a637f4926abd3e5827da79d07bc92b556b24b6dfece8e264"
+      },
+      "data/interim/grammy_soty_2000_2024.parquet": {
+        "sha256": "06caee7786d4d8589882093880d487e6d17aba45bd9f7edc098e66a068e74fd7"
+      },
+      "data/interim/grammy_soty_enriched_2000_2024.parquet": {
+        "sha256": "57dbeb0d4c7a7a9e227f400e6c8bbbd5893388051cbeadd84311dda8f0b64428"
+      },
+      "data/interim/grammy_spotify_exact_candidates.parquet": {
+        "sha256": "049c6e8504b738f74c4369e5faa29d962e06e6acf3884cdcbdc83cb533d9acdd"
+      },
+      "data/interim/grammy_spotify_variant_candidates.parquet": {
+        "sha256": "1c0e8ba758767084f9235ebb0b51461fede1b331a6a40d5738beefd01037bb66"
+      },
+      "data/interim/spotify_track_index.parquet": {
+        "sha256": "49674843081015da6b5d0b5749d5267b70df0ec1f69833eb47ee250aa9763dab"
+      },
+      "README.md": {
+        "sha256": "cfd47e4965ae5abb324a05e7a6d2c49d316319fa7c0a758ddb94b580136a510c"
+      },
+      "reports/billboard_artist_normalization_collisions.csv": {
+        "sha256": "b02d85a1ae0e04c7058dfae5ad226760e484f11c88dc338ed253238ce82a2e18"
+      },
+      "reports/billboard_duplicate_review.csv": {
+        "sha256": "83f2c997a71bbb1cccd21ffa2bf004b1929a799a33b52243e2c3f7de319eea6e"
+      },
+      "reports/billboard_exclusions.csv": {
+        "sha256": "efc4c26643c2ea2b83ecad445565a618b490e9ddca100cdfe83b4cd4d0d8ae89"
+      },
+      "reports/billboard_grammy_variant_review.csv": {
+        "sha256": "cc728964248dc05ecaf77b9434bf03bf3acc3796f3310de4b45a28933e37a1d4"
+      },
+      "reports/billboard_grammy_year_gap_review.csv": {
+        "sha256": "ae5eeca67c9500744925845524c908bb6901d58e2a3885e8618d3c6f4d0d0720"
+      },
+      "reports/billboard_sing_collision_detail.csv": {
+        "sha256": "78a61825abb00ec8557962c2aafd05f1a6fa301f217250682c0b27a2389842ee"
+      },
+      "reports/billboard_spotify_ambiguous.csv": {
+        "sha256": "7ecebd04714a4e7992c359c6865b4440b629946bcb7b30de16a150ba541141b4"
+      },
+      "reports/billboard_spotify_unmatched.csv": {
+        "sha256": "97fb8a83d4711f42254139efff18e3a0bd40b7b6e5384899dce5feca93aee326"
+      },
+      "reports/billboard_spotify_variant_review.csv": {
+        "sha256": "154fdee53e4613b0ce5b36fb6f6e4356bde147b063178dcb603760f98ad16b59"
+      },
+      "reports/billboard_title_artist_normalization_collisions.csv": {
+        "sha256": "ffbb741130c4b507bc8121f6ba22a72c701dd6b4e17a3acedbeaa72d01a2a7df"
+      },
+      "reports/billboard_title_normalization_collisions.csv": {
+        "sha256": "9891ae7f70e758ce748ddf20e9efde42db3ea02472678d968f689ca8b19530a2"
+      },
+      "reports/billboard_unmatched_diagnosis.csv": {
+        "sha256": "8c16d0c00db44bcffc1fd4cdb3732f3b543656811af6d1a7bc37f042f0a10843"
+      },
+      "reports/exact_match_audit.json": {
+        "sha256": "7c033da097762a257eb782c2ddbe88e23db32cfd27405aa5f5c6d7105a63e4e0"
+      },
+      "reports/exact_match_audit.md": {
+        "sha256": "41d850a881eb411f42169cafd1a840e214922f3e0ab57874f46c939a5267b5ae"
+      },
+      "reports/grammy_artist_normalization_collisions.csv": {
+        "sha256": "2b5c00c22ca24536c5abbb7944398317e4aefe39479d5d6ba99d25c0f6a2a3c3"
+      },
+      "reports/grammy_exclusions.csv": {
+        "sha256": "1d42a8b05546bc25b30d293c05c8f6dbc5c7229561b3eb11d1926947a500c9de"
+      },
+      "reports/grammy_performer_parse_audit.csv": {
+        "sha256": "efb4c1859a596064f948b3f306123b4d39dd28bdd2cea1be44883cd88527b4e1"
+      },
+      "reports/grammy_performer_review.csv": {
+        "sha256": "774aaddf5cc555e6a78148b1a7467a818a5d2ae58bb0d5ee18246ac08d20cb1e"
+      },
+      "reports/grammy_spotify_ambiguous.csv": {
+        "sha256": "79235672de5851a5776ae8ed8bfb5fad90eec28fe0f9b7950d039b2784182894"
+      },
+      "reports/grammy_spotify_unmatched.csv": {
+        "sha256": "d90a343ea41bc767ff712d47691e486c7122a7b4226cdd4572856954c693c9b2"
+      },
+      "reports/grammy_spotify_variant_review.csv": {
+        "sha256": "3027214eed74915f12b94af6acd8868fdb751d116951e7a8e054647ca0e79235"
+      },
+      "reports/grammy_title_artist_normalization_collisions.csv": {
+        "sha256": "e95e9bae576213f8fcfe148477f9d829cd38664b8c509df9eff311bae2f8e6cf"
+      },
+      "reports/grammy_title_normalization_collisions.csv": {
+        "sha256": "eea25a833281297d7ecae661102f4ad2e60decdf80685903723819613bffcc81"
+      },
+      "reports/grammy_unmatched_diagnosis.csv": {
+        "sha256": "1fe370d2fadf0de2d90c6f00c0b5fbe30f22366f1e37c4fe924cb11988b5f0d0"
+      },
+      "reports/match_expansion_audit.json": {
+        "sha256": "e3780ae99e00c6a1865a270d7960a59462cd349a30b0f5153bad4d373c0ed2f5"
+      },
+      "reports/match_expansion_audit.md": {
+        "sha256": "029edd52420b036e1b25e5447748395f56efd41be80224f75de1eca3fac1c9f2"
+      },
+      "reports/pre_match_audit.json": {
+        "sha256": "23aedacee318e2c181c93f6caac29473ba563798de872ce2a46ab4d03e6755ae"
+      },
+      "reports/pre_match_audit.md": {
+        "sha256": "dfb8f201726f24905fb24283dd7cfc3fcd0cce840152e2ca37650d13ef85b50d"
+      },
+      "reports/preparation_summary.json": {
+        "sha256": "1b42d2bbdd30657ed19066577e44a811d42b41770b7e7942d1877b245a52bbcf"
+      },
+      "reports/preparation_summary.md": {
+        "sha256": "1cb3a9043daa5dc51bc0835ae8b85855869658a1df12450901d9e4326f14f3c8"
+      },
+      "reports/raw_profile.json": {
+        "sha256": "430c7b752f2639de35ce3bb3edbd0950565090563341296e4799c1ee8b5ef0bc"
+      },
+      "reports/raw_profile.md": {
+        "sha256": "9c2681bbd489e5ef159f769d46ab31f52dc8e0415529eb69fde8d7c413227cd0"
+      },
+      "reports/spotify_artist_normalization_collisions.csv": {
+        "sha256": "c4fed05aaa9def60ea3ceed14eca9af8d6dc123f5faca28edf64ba9ed80b05db"
+      },
+      "reports/spotify_duplicate_id_review.csv": {
+        "sha256": "f39881f3fbab595616010b942915cdb191635a3fad5339d7282c2076b325ba78"
+      },
+      "reports/spotify_exclusions.csv": {
+        "sha256": "f0d7745ca76b70489759d044258b8374d84cdd4aad101c540de7944fc8a3e503"
+      },
+      "reports/spotify_multiple_versions_review.csv": {
+        "sha256": "1348cc2844887b79964eac556f44beb5c78414a6538d64144ebabdcaf7848ca3"
+      },
+      "reports/spotify_title_artist_normalization_collisions.csv": {
+        "sha256": "afdd09a8bff1e07a16409fe9104aad5cba05b4051a84ca088dde774c5ff28609"
+      },
+      "reports/spotify_title_normalization_collisions.csv": {
+        "sha256": "bde8835fcc5c3a76b923c860c939830b805b35f83fae3485330dd87555098b7b"
+      },
+      "reports/variant_collision_review.csv": {
+        "sha256": "b4245662a767e41413dd2e39bbee90a8a6cfc3fd4fa22637530bdfe8c2ed3b6f"
+      },
+      "src/01_profile_raw_data.py": {
+        "sha256": "637fd3b4e5e4e01cbb571d7968c8282336e3a82576b47e250e5f689f35a9fcc2"
+      },
+      "src/02_prepare_source_tables.py": {
+        "sha256": "94ed178e7ed9e161a53d2031fa9aca358263c1f06247d0ab8b5e9385fb774ca4"
+      },
+      "src/02b_pre_match_audit.py": {
+        "sha256": "f5347f5c638f076954d9e414c5c9bf0a8a1d0e53c3c2980a4dd466b1ab446c05"
+      },
+      "src/03_exact_match_audit.py": {
+        "sha256": "8bee0480a64f2e10bae43dcd1bef659e2ccf2cc67d4331ef134571323e08ada7"
+      },
+      "src/04_match_expansion_audit.py": {
+        "sha256": "04c8a80e10a743161522287857e4b998e6bf908cff24bf7d7c21b6d0720c2e4c"
+      },
+      "src/music_success_nlp/__init__.py": {
+        "sha256": "ba5534d837f5570fce48e593418cda3da7e292886ffd8a163e0d2661434b66ab"
+      },
+      "src/music_success_nlp/normalization.py": {
+        "sha256": "99522c50317937cd1568f862e487b32a49b1f71902667ea116944aa82d80a967"
+      },
+      "tests/test_exact_match_audit.py": {
+        "sha256": "30980ea175e9f8ea8a32dfb0a4b233a0bf5019c9c7e0e9c72c3688e4b32a77a2"
+      },
+      "tests/test_match_expansion_audit.py": {
+        "sha256": "d678ae9f3b0ebae35cbfefc5a8ee86a9de214cfc4a181fbdffd37f6f78502745"
+      },
+      "tests/test_pre_match_audit.py": {
+        "sha256": "5d134d2a1ba59db690db05479483bc4876bd165765c4b0f3b35551811f2f38e3"
+      },
+      "tests/test_prepare_source_tables.py": {
+        "sha256": "fad5ac57d3d2222e14f06ac24ef54bb56b4df7f726511388a564da8ef4ec0c64"
+      },
+      "tests/test_raw_profile.py": {
+        "sha256": "0708782d722a26ff012bd9005ef78c7bb60ba4335d3580fb762048671d4ca1ba"
+      }
+    },
+    "after": {
+      "data/raw/grammies_v4.csv": {
+        "verification": "metadata_only_no_read",
+        "bytes": 4196575,
+        "mtime_ns": 1789425082663706300
+      },
+      "data/raw/hot100.csv": {
+        "verification": "metadata_only_no_read",
+        "bytes": 38358645,
+        "mtime_ns": 1791132196350432200
+      },
+      "data/raw/songs_with_attributes_and_lyrics.csv": {
+        "verification": "metadata_only_no_read",
+        "bytes": 1545144675,
+        "mtime_ns": 1791132772000000000
+      },
+      "data/interim/billboard_grammy_exact_candidates.parquet": {
+        "sha256": "ab13e516e69522388d214a7dd6b144a5f35ea24e89c8d7a39dfbf24cf899dcb1"
+      },
+      "data/interim/billboard_grammy_variant_candidates.parquet": {
+        "sha256": "f23909fdfcc2c0d09a7c69df38e02b49915232acbad5416ebbe17ff2331688bb"
+      },
+      "data/interim/billboard_song_level_2000_2024.parquet": {
+        "sha256": "8eb042aca5dd7a012ce5858c0960290c215a4421102f8d08ca898633d3b60927"
+      },
+      "data/interim/billboard_spotify_exact_candidates.parquet": {
+        "sha256": "4c5b26c50a61b86d63a7c814e7f87c3f3bf95aec62cb0445ad6220716821737b"
+      },
+      "data/interim/billboard_spotify_variant_candidates.parquet": {
+        "sha256": "873d2c25a44a7ca4a637f4926abd3e5827da79d07bc92b556b24b6dfece8e264"
+      },
+      "data/interim/grammy_soty_2000_2024.parquet": {
+        "sha256": "06caee7786d4d8589882093880d487e6d17aba45bd9f7edc098e66a068e74fd7"
+      },
+      "data/interim/grammy_soty_enriched_2000_2024.parquet": {
+        "sha256": "57dbeb0d4c7a7a9e227f400e6c8bbbd5893388051cbeadd84311dda8f0b64428"
+      },
+      "data/interim/grammy_spotify_exact_candidates.parquet": {
+        "sha256": "049c6e8504b738f74c4369e5faa29d962e06e6acf3884cdcbdc83cb533d9acdd"
+      },
+      "data/interim/grammy_spotify_variant_candidates.parquet": {
+        "sha256": "1c0e8ba758767084f9235ebb0b51461fede1b331a6a40d5738beefd01037bb66"
+      },
+      "data/interim/spotify_track_index.parquet": {
+        "sha256": "49674843081015da6b5d0b5749d5267b70df0ec1f69833eb47ee250aa9763dab"
+      },
+      "README.md": {
+        "sha256": "cfd47e4965ae5abb324a05e7a6d2c49d316319fa7c0a758ddb94b580136a510c"
+      },
+      "reports/billboard_artist_normalization_collisions.csv": {
+        "sha256": "b02d85a1ae0e04c7058dfae5ad226760e484f11c88dc338ed253238ce82a2e18"
+      },
+      "reports/billboard_duplicate_review.csv": {
+        "sha256": "83f2c997a71bbb1cccd21ffa2bf004b1929a799a33b52243e2c3f7de319eea6e"
+      },
+      "reports/billboard_exclusions.csv": {
+        "sha256": "efc4c26643c2ea2b83ecad445565a618b490e9ddca100cdfe83b4cd4d0d8ae89"
+      },
+      "reports/billboard_grammy_variant_review.csv": {
+        "sha256": "cc728964248dc05ecaf77b9434bf03bf3acc3796f3310de4b45a28933e37a1d4"
+      },
+      "reports/billboard_grammy_year_gap_review.csv": {
+        "sha256": "ae5eeca67c9500744925845524c908bb6901d58e2a3885e8618d3c6f4d0d0720"
+      },
+      "reports/billboard_sing_collision_detail.csv": {
+        "sha256": "78a61825abb00ec8557962c2aafd05f1a6fa301f217250682c0b27a2389842ee"
+      },
+      "reports/billboard_spotify_ambiguous.csv": {
+        "sha256": "7ecebd04714a4e7992c359c6865b4440b629946bcb7b30de16a150ba541141b4"
+      },
+      "reports/billboard_spotify_unmatched.csv": {
+        "sha256": "97fb8a83d4711f42254139efff18e3a0bd40b7b6e5384899dce5feca93aee326"
+      },
+      "reports/billboard_spotify_variant_review.csv": {
+        "sha256": "154fdee53e4613b0ce5b36fb6f6e4356bde147b063178dcb603760f98ad16b59"
+      },
+      "reports/billboard_title_artist_normalization_collisions.csv": {
+        "sha256": "ffbb741130c4b507bc8121f6ba22a72c701dd6b4e17a3acedbeaa72d01a2a7df"
+      },
+      "reports/billboard_title_normalization_collisions.csv": {
+        "sha256": "9891ae7f70e758ce748ddf20e9efde42db3ea02472678d968f689ca8b19530a2"
+      },
+      "reports/billboard_unmatched_diagnosis.csv": {
+        "sha256": "8c16d0c00db44bcffc1fd4cdb3732f3b543656811af6d1a7bc37f042f0a10843"
+      },
+      "reports/exact_match_audit.json": {
+        "sha256": "7c033da097762a257eb782c2ddbe88e23db32cfd27405aa5f5c6d7105a63e4e0"
+      },
+      "reports/exact_match_audit.md": {
+        "sha256": "41d850a881eb411f42169cafd1a840e214922f3e0ab57874f46c939a5267b5ae"
+      },
+      "reports/grammy_artist_normalization_collisions.csv": {
+        "sha256": "2b5c00c22ca24536c5abbb7944398317e4aefe39479d5d6ba99d25c0f6a2a3c3"
+      },
+      "reports/grammy_exclusions.csv": {
+        "sha256": "1d42a8b05546bc25b30d293c05c8f6dbc5c7229561b3eb11d1926947a500c9de"
+      },
+      "reports/grammy_performer_parse_audit.csv": {
+        "sha256": "efb4c1859a596064f948b3f306123b4d39dd28bdd2cea1be44883cd88527b4e1"
+      },
+      "reports/grammy_performer_review.csv": {
+        "sha256": "774aaddf5cc555e6a78148b1a7467a818a5d2ae58bb0d5ee18246ac08d20cb1e"
+      },
+      "reports/grammy_spotify_ambiguous.csv": {
+        "sha256": "79235672de5851a5776ae8ed8bfb5fad90eec28fe0f9b7950d039b2784182894"
+      },
+      "reports/grammy_spotify_unmatched.csv": {
+        "sha256": "d90a343ea41bc767ff712d47691e486c7122a7b4226cdd4572856954c693c9b2"
+      },
+      "reports/grammy_spotify_variant_review.csv": {
+        "sha256": "3027214eed74915f12b94af6acd8868fdb751d116951e7a8e054647ca0e79235"
+      },
+      "reports/grammy_title_artist_normalization_collisions.csv": {
+        "sha256": "e95e9bae576213f8fcfe148477f9d829cd38664b8c509df9eff311bae2f8e6cf"
+      },
+      "reports/grammy_title_normalization_collisions.csv": {
+        "sha256": "eea25a833281297d7ecae661102f4ad2e60decdf80685903723819613bffcc81"
+      },
+      "reports/grammy_unmatched_diagnosis.csv": {
+        "sha256": "1fe370d2fadf0de2d90c6f00c0b5fbe30f22366f1e37c4fe924cb11988b5f0d0"
+      },
+      "reports/match_expansion_audit.json": {
+        "sha256": "e3780ae99e00c6a1865a270d7960a59462cd349a30b0f5153bad4d373c0ed2f5"
+      },
+      "reports/match_expansion_audit.md": {
+        "sha256": "029edd52420b036e1b25e5447748395f56efd41be80224f75de1eca3fac1c9f2"
+      },
+      "reports/pre_match_audit.json": {
+        "sha256": "23aedacee318e2c181c93f6caac29473ba563798de872ce2a46ab4d03e6755ae"
+      },
+      "reports/pre_match_audit.md": {
+        "sha256": "dfb8f201726f24905fb24283dd7cfc3fcd0cce840152e2ca37650d13ef85b50d"
+      },
+      "reports/preparation_summary.json": {
+        "sha256": "1b42d2bbdd30657ed19066577e44a811d42b41770b7e7942d1877b245a52bbcf"
+      },
+      "reports/preparation_summary.md": {
+        "sha256": "1cb3a9043daa5dc51bc0835ae8b85855869658a1df12450901d9e4326f14f3c8"
+      },
+      "reports/raw_profile.json": {
+        "sha256": "430c7b752f2639de35ce3bb3edbd0950565090563341296e4799c1ee8b5ef0bc"
+      },
+      "reports/raw_profile.md": {
+        "sha256": "9c2681bbd489e5ef159f769d46ab31f52dc8e0415529eb69fde8d7c413227cd0"
+      },
+      "reports/spotify_artist_normalization_collisions.csv": {
+        "sha256": "c4fed05aaa9def60ea3ceed14eca9af8d6dc123f5faca28edf64ba9ed80b05db"
+      },
+      "reports/spotify_duplicate_id_review.csv": {
+        "sha256": "f39881f3fbab595616010b942915cdb191635a3fad5339d7282c2076b325ba78"
+      },
+      "reports/spotify_exclusions.csv": {
+        "sha256": "f0d7745ca76b70489759d044258b8374d84cdd4aad101c540de7944fc8a3e503"
+      },
+      "reports/spotify_multiple_versions_review.csv": {
+        "sha256": "1348cc2844887b79964eac556f44beb5c78414a6538d64144ebabdcaf7848ca3"
+      },
+      "reports/spotify_title_artist_normalization_collisions.csv": {
+        "sha256": "afdd09a8bff1e07a16409fe9104aad5cba05b4051a84ca088dde774c5ff28609"
+      },
+      "reports/spotify_title_normalization_collisions.csv": {
+        "sha256": "bde8835fcc5c3a76b923c860c939830b805b35f83fae3485330dd87555098b7b"
+      },
+      "reports/variant_collision_review.csv": {
+        "sha256": "b4245662a767e41413dd2e39bbee90a8a6cfc3fd4fa22637530bdfe8c2ed3b6f"
+      },
+      "src/01_profile_raw_data.py": {
+        "sha256": "637fd3b4e5e4e01cbb571d7968c8282336e3a82576b47e250e5f689f35a9fcc2"
+      },
+      "src/02_prepare_source_tables.py": {
+        "sha256": "94ed178e7ed9e161a53d2031fa9aca358263c1f06247d0ab8b5e9385fb774ca4"
+      },
+      "src/02b_pre_match_audit.py": {
+        "sha256": "f5347f5c638f076954d9e414c5c9bf0a8a1d0e53c3c2980a4dd466b1ab446c05"
+      },
+      "src/03_exact_match_audit.py": {
+        "sha256": "8bee0480a64f2e10bae43dcd1bef659e2ccf2cc67d4331ef134571323e08ada7"
+      },
+      "src/04_match_expansion_audit.py": {
+        "sha256": "04c8a80e10a743161522287857e4b998e6bf908cff24bf7d7c21b6d0720c2e4c"
+      },
+      "src/music_success_nlp/__init__.py": {
+        "sha256": "ba5534d837f5570fce48e593418cda3da7e292886ffd8a163e0d2661434b66ab"
+      },
+      "src/music_success_nlp/normalization.py": {
+        "sha256": "99522c50317937cd1568f862e487b32a49b1f71902667ea116944aa82d80a967"
+      },
+      "tests/test_exact_match_audit.py": {
+        "sha256": "30980ea175e9f8ea8a32dfb0a4b233a0bf5019c9c7e0e9c72c3688e4b32a77a2"
+      },
+      "tests/test_match_expansion_audit.py": {
+        "sha256": "d678ae9f3b0ebae35cbfefc5a8ee86a9de214cfc4a181fbdffd37f6f78502745"
+      },
+      "tests/test_pre_match_audit.py": {
+        "sha256": "5d134d2a1ba59db690db05479483bc4876bd165765c4b0f3b35551811f2f38e3"
+      },
+      "tests/test_prepare_source_tables.py": {
+        "sha256": "fad5ac57d3d2222e14f06ac24ef54bb56b4df7f726511388a564da8ef4ec0c64"
+      },
+      "tests/test_raw_profile.py": {
+        "sha256": "0708782d722a26ff012bd9005ef78c7bb60ba4335d3580fb762048671d4ca1ba"
+      }
+    }
+  },
+  "validation": {
+    "protected_files_unchanged": true,
+    "protected_file_count": 65,
+    "raw_files_not_opened": true,
+    "raw_metadata_unchanged": true,
+    "all_nonraw_protected_hashes_unchanged": true,
+    "parquet_roundtrips": {
+      "billboard_spotify_accepted_candidates": 11758,
+      "grammy_spotify_accepted_candidates": 338,
+      "billboard_grammy_accepted_pairs": 125
+    },
+    "billboard_grammy_exact_unchanged": true,
+    "sing_quarantined": true,
+    "no_fuzzy_matching": true,
+    "no_representative_id_selection": true,
+    "no_audio_aggregation": true,
+    "no_raw_lyrics_extraction": true,
+    "no_final_modelling_dataset": true
+  }
+}

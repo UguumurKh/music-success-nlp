@@ -1,0 +1,25 @@
+[project]
+name = "music-success-nlp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Uguumur Khosbayar", email = "kh.uguumur39@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "langdetect==1.0.9",
+    "matplotlib>=3.11.2",
+    "polars>=2.0.0",
+    "pyarrow>=26.0.0",
+    "rapidfuzz>=3.14.6",
+    "scikit-learn>=1.9.1",
+    "unidecode>=1.4.0",
+]
+
+[project.scripts]
+music-success-nlp = "music_success_nlp:main"
+
+[build-system]
+requires = ["uv_build>=0.12.16,<0.13.0"]
+build-backend = "uv_build"

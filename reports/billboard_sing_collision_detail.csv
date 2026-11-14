@@ -1,0 +1,3 @@
+Song,Artist,first_chart_date,last_chart_date,chart_weeks,peak_rank,weekly_records_after_exact_dedup,raw_weekly_records,top10,number_one,title_norm,artist_norm
+Sing!,Glee Cast,2010-10-27,2010-10-27,1,87,1,1,0,0,sing,glee cast
+Sing,Glee Cast,2011-03-02,2011-03-02,1,49,1,1,0,0,sing,glee cast

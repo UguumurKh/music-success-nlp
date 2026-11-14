@@ -1,0 +1,315 @@
+{
+  "billboard": {
+    "records": [
+      {
+        "Song": "Sing!",
+        "Artist": "Glee Cast",
+        "first_chart_date": "2010-10-27",
+        "last_chart_date": "2010-10-27",
+        "chart_weeks": 1,
+        "peak_rank": 87,
+        "weekly_records_after_exact_dedup": 1,
+        "raw_weekly_records": 1,
+        "top10": 0,
+        "number_one": 0,
+        "title_norm": "sing",
+        "artist_norm": "glee cast"
+      },
+      {
+        "Song": "Sing",
+        "Artist": "Glee Cast",
+        "first_chart_date": "2011-03-02",
+        "last_chart_date": "2011-03-02",
+        "chart_weeks": 1,
+        "peak_rank": 49,
+        "weekly_records_after_exact_dedup": 1,
+        "raw_weekly_records": 1,
+        "top10": 0,
+        "number_one": 0,
+        "title_norm": "sing",
+        "artist_norm": "glee cast"
+      }
+    ],
+    "period_comparisons": [
+      {
+        "earlier_song": "Sing!",
+        "later_song": "Sing",
+        "days_between_earlier_last_and_later_first": 126,
+        "relationship": "gap",
+        "distinct_histories_indicated": true,
+        "note": "Date ranges describe chart histories, not proof of different musical works. No merge performed."
+      }
+    ]
+  },
+  "grammy": {
+    "records": 150,
+    "successful_extractions": 150,
+    "failed_extractions": 0,
+    "blank_extracted_performers": 0,
+    "titles_changed": 4,
+    "raw_duplicate_keys": [],
+    "normalized_duplicate_keys_before": [],
+    "normalized_duplicate_keys_after": [],
+    "new_duplicate_keys_after_label_removal": [],
+    "changed_titles": [
+      {
+        "source_row": 13531,
+        "song_or_album": "Say My Name (Single)",
+        "title_norm": "say my name single",
+        "title_match_norm": "say my name"
+      },
+      {
+        "source_row": 13532,
+        "song_or_album": "I Try (Single)",
+        "title_norm": "i try single",
+        "title_match_norm": "i try"
+      },
+      {
+        "source_row": 13533,
+        "song_or_album": "I Hope You Dance (Single)",
+        "title_norm": "i hope you dance single",
+        "title_match_norm": "i hope you dance"
+      },
+      {
+        "source_row": 13534,
+        "song_or_album": "Breathe (Single)",
+        "title_norm": "breathe single",
+        "title_match_norm": "breathe"
+      }
+    ],
+    "examples": {
+      "Solo-style performers": [
+        {
+          "source_row": 13531,
+          "year": 2000,
+          "song_or_album": "Say My Name (Single)",
+          "performer_extracted": "Destiny's Child",
+          "performer_norm": "destiny s child"
+        },
+        {
+          "source_row": 13532,
+          "year": 2000,
+          "song_or_album": "I Try (Single)",
+          "performer_extracted": "Macy Gray",
+          "performer_norm": "macy gray"
+        },
+        {
+          "source_row": 13533,
+          "year": 2000,
+          "song_or_album": "I Hope You Dance (Single)",
+          "performer_extracted": "Lee Ann Womack",
+          "performer_norm": "lee ann womack"
+        },
+        {
+          "source_row": 13534,
+          "year": 2000,
+          "song_or_album": "Breathe (Single)",
+          "performer_extracted": "Faith Hill",
+          "performer_norm": "faith hill"
+        },
+        {
+          "source_row": 13535,
+          "year": 2000,
+          "song_or_album": "Beautiful Day",
+          "performer_extracted": "U2",
+          "performer_norm": "u2"
+        }
+      ],
+      "Featuring": [
+        {
+          "source_row": 17268,
+          "year": 2007,
+          "song_or_album": "Umbrella",
+          "performer_extracted": "Rihanna Featuring Jay-Z",
+          "performer_norm": "rihanna featuring jay z"
+        },
+        {
+          "source_row": 17824,
+          "year": 2008,
+          "song_or_album": "American Boy",
+          "performer_extracted": "Estelle Featuring Kanye West",
+          "performer_norm": "estelle featuring kanye west"
+        },
+        {
+          "source_row": 18838,
+          "year": 2010,
+          "song_or_album": "Love The Way You Lie",
+          "performer_extracted": "Eminem Featuring Rihanna",
+          "performer_norm": "eminem featuring rihanna"
+        },
+        {
+          "source_row": 19711,
+          "year": 2012,
+          "song_or_album": "We Are Young",
+          "performer_extracted": "Fun. Featuring Janelle Monáe",
+          "performer_norm": "fun featuring janelle monae"
+        },
+        {
+          "source_row": 20117,
+          "year": 2013,
+          "song_or_album": "Same Love",
+          "performer_extracted": "Macklemore & Ryan Lewis Featuring Mary Lambert",
+          "performer_norm": "macklemore ryan lewis featuring mary lambert"
+        }
+      ],
+      "Ampersand collaborators": [
+        {
+          "source_row": 19272,
+          "year": 2011,
+          "song_or_album": "The Cave",
+          "performer_extracted": "Mumford & Sons",
+          "performer_norm": "mumford sons"
+        },
+        {
+          "source_row": 19273,
+          "year": 2011,
+          "song_or_album": "All Of The Lights",
+          "performer_extracted": "Kanye West; Rihanna; Kid Cudi & Fergie",
+          "performer_norm": "kanye west rihanna kid cudi fergie"
+        },
+        {
+          "source_row": 20117,
+          "year": 2013,
+          "song_or_album": "Same Love",
+          "performer_extracted": "Macklemore & Ryan Lewis Featuring Mary Lambert",
+          "performer_norm": "macklemore ryan lewis featuring mary lambert"
+        },
+        {
+          "source_row": 21796,
+          "year": 2017,
+          "song_or_album": "1-800-273-8255",
+          "performer_extracted": "Logic Featuring Alessia Cara & Khalid",
+          "performer_norm": "logic featuring alessia cara khalid"
+        },
+        {
+          "source_row": 21799,
+          "year": 2017,
+          "song_or_album": "Despacito",
+          "performer_extracted": "Luis Fonsi & Daddy Yankee Featuring Justin Bieber",
+          "performer_norm": "luis fonsi daddy yankee featuring justin bieber"
+        }
+      ],
+      "And collaborators": [
+        {
+          "source_row": 18841,
+          "year": 2010,
+          "song_or_album": "Beg Steal Or Borrow",
+          "performer_extracted": "Ray LaMontagne And The Pariah Dogs",
+          "performer_norm": "ray lamontagne and the pariah dogs"
+        }
+      ],
+      "Semicolon collaborators": [
+        {
+          "source_row": 19273,
+          "year": 2011,
+          "song_or_album": "All Of The Lights",
+          "performer_extracted": "Kanye West; Rihanna; Kid Cudi & Fergie",
+          "performer_norm": "kanye west rihanna kid cudi fergie"
+        },
+        {
+          "source_row": 22231,
+          "year": 2018,
+          "song_or_album": "The Middle",
+          "performer_extracted": "Zedd; Maren Morris & Grey",
+          "performer_norm": "zedd maren morris grey"
+        },
+        {
+          "source_row": 24043,
+          "year": 2022,
+          "song_or_album": "GOD DID",
+          "performer_extracted": "DJ Khaled Featuring Rick Ross; Lil Wayne; Jay-Z; John Legend & Fridayy",
+          "performer_norm": "dj khaled featuring rick ross lil wayne jay z john legend fridayy"
+        }
+      ]
+    },
+    "unresolved_records": [],
+    "replacement_character_records": 0
+  },
+  "risks": [
+    "Glee Cast collision remains unresolved as musical identity; the two raw title histories must remain separate.",
+    "0 extracted performers contain an existing Unicode replacement character (U+FFFD). Extraction succeeds structurally, but damaged names and their normalized keys need review; no encoding repair was attempted.",
+    "Parser failures and empty normalized performers, if any, are listed below. Collaborator order and Featuring labels remain unchanged.",
+    "title_match_norm is for future candidate generation only. No dataset matching or automatic record merging was performed."
+  ],
+  "integrity": {
+    "before": {
+      ".venv/Lib/site-packages/pyarrow/tests/data/parquet/v0.7.1.all-named-index.parquet": "60f1945edc3e4ec38f6e234389e647a1b369de8afb9c7840c491a39880c0caa1",
+      ".venv/Lib/site-packages/pyarrow/tests/data/parquet/v0.7.1.column-metadata-handling.parquet": "eec79b660a5f75c3f7ed092c4f71610cbeaf380f6047a1816aae3834256d398c",
+      ".venv/Lib/site-packages/pyarrow/tests/data/parquet/v0.7.1.parquet": "be6773848ce905b99192adc68f0c3b2aabab7d214db50b92a52203790566ab2b",
+      ".venv/Lib/site-packages/pyarrow/tests/data/parquet/v0.7.1.some-named-index.parquet": "5468128ea8a1091b5d07195471f3f9b3705247b69440aba45be6c68092dffc76",
+      "data/interim/billboard_song_level_2000_2024.parquet": "8eb042aca5dd7a012ce5858c0960290c215a4421102f8d08ca898633d3b60927",
+      "data/interim/grammy_soty_2000_2024.parquet": "06caee7786d4d8589882093880d487e6d17aba45bd9f7edc098e66a068e74fd7",
+      "data/interim/spotify_track_index.parquet": "49674843081015da6b5d0b5749d5267b70df0ec1f69833eb47ee250aa9763dab",
+      "data/raw/grammies_v4.csv": "6211e1a9292eaabc454b77e83e8ad2d016df311f2a21ccc00c051d7885c2e803",
+      "data/raw/hot100.csv": "d34b5b480cad9836e8d74e7dcc6408c814387c378d4e5ffa5ded4406700190c4",
+      "data/raw/songs_with_attributes_and_lyrics.csv": "698efaddfa802e1ba60010eaabcbb138bc017291f34bebaddb22f33ff490bd63",
+      "README.md": "cfd47e4965ae5abb324a05e7a6d2c49d316319fa7c0a758ddb94b580136a510c",
+      "reports/billboard_artist_normalization_collisions.csv": "b02d85a1ae0e04c7058dfae5ad226760e484f11c88dc338ed253238ce82a2e18",
+      "reports/billboard_duplicate_review.csv": "83f2c997a71bbb1cccd21ffa2bf004b1929a799a33b52243e2c3f7de319eea6e",
+      "reports/billboard_exclusions.csv": "efc4c26643c2ea2b83ecad445565a618b490e9ddca100cdfe83b4cd4d0d8ae89",
+      "reports/billboard_title_artist_normalization_collisions.csv": "ffbb741130c4b507bc8121f6ba22a72c701dd6b4e17a3acedbeaa72d01a2a7df",
+      "reports/billboard_title_normalization_collisions.csv": "9891ae7f70e758ce748ddf20e9efde42db3ea02472678d968f689ca8b19530a2",
+      "reports/grammy_artist_normalization_collisions.csv": "2b5c00c22ca24536c5abbb7944398317e4aefe39479d5d6ba99d25c0f6a2a3c3",
+      "reports/grammy_exclusions.csv": "1d42a8b05546bc25b30d293c05c8f6dbc5c7229561b3eb11d1926947a500c9de",
+      "reports/grammy_performer_review.csv": "774aaddf5cc555e6a78148b1a7467a818a5d2ae58bb0d5ee18246ac08d20cb1e",
+      "reports/grammy_title_artist_normalization_collisions.csv": "e95e9bae576213f8fcfe148477f9d829cd38664b8c509df9eff311bae2f8e6cf",
+      "reports/grammy_title_normalization_collisions.csv": "eea25a833281297d7ecae661102f4ad2e60decdf80685903723819613bffcc81",
+      "reports/preparation_summary.json": "1b42d2bbdd30657ed19066577e44a811d42b41770b7e7942d1877b245a52bbcf",
+      "reports/preparation_summary.md": "1cb3a9043daa5dc51bc0835ae8b85855869658a1df12450901d9e4326f14f3c8",
+      "reports/raw_profile.json": "430c7b752f2639de35ce3bb3edbd0950565090563341296e4799c1ee8b5ef0bc",
+      "reports/raw_profile.md": "9c2681bbd489e5ef159f769d46ab31f52dc8e0415529eb69fde8d7c413227cd0",
+      "reports/spotify_artist_normalization_collisions.csv": "c4fed05aaa9def60ea3ceed14eca9af8d6dc123f5faca28edf64ba9ed80b05db",
+      "reports/spotify_duplicate_id_review.csv": "f39881f3fbab595616010b942915cdb191635a3fad5339d7282c2076b325ba78",
+      "reports/spotify_exclusions.csv": "f0d7745ca76b70489759d044258b8374d84cdd4aad101c540de7944fc8a3e503",
+      "reports/spotify_multiple_versions_review.csv": "1348cc2844887b79964eac556f44beb5c78414a6538d64144ebabdcaf7848ca3",
+      "reports/spotify_title_artist_normalization_collisions.csv": "afdd09a8bff1e07a16409fe9104aad5cba05b4051a84ca088dde774c5ff28609",
+      "reports/spotify_title_normalization_collisions.csv": "bde8835fcc5c3a76b923c860c939830b805b35f83fae3485330dd87555098b7b",
+      "src/01_profile_raw_data.py": "637fd3b4e5e4e01cbb571d7968c8282336e3a82576b47e250e5f689f35a9fcc2",
+      "src/02_prepare_source_tables.py": "94ed178e7ed9e161a53d2031fa9aca358263c1f06247d0ab8b5e9385fb774ca4",
+      "src/music_success_nlp/__init__.py": "ba5534d837f5570fce48e593418cda3da7e292886ffd8a163e0d2661434b66ab",
+      "src/music_success_nlp/normalization.py": "99522c50317937cd1568f862e487b32a49b1f71902667ea116944aa82d80a967",
+      "tests/test_prepare_source_tables.py": "fad5ac57d3d2222e14f06ac24ef54bb56b4df7f726511388a564da8ef4ec0c64",
+      "tests/test_raw_profile.py": "0708782d722a26ff012bd9005ef78c7bb60ba4335d3580fb762048671d4ca1ba"
+    },
+    "after": {
+      ".venv/Lib/site-packages/pyarrow/tests/data/parquet/v0.7.1.all-named-index.parquet": "60f1945edc3e4ec38f6e234389e647a1b369de8afb9c7840c491a39880c0caa1",
+      ".venv/Lib/site-packages/pyarrow/tests/data/parquet/v0.7.1.column-metadata-handling.parquet": "eec79b660a5f75c3f7ed092c4f71610cbeaf380f6047a1816aae3834256d398c",
+      ".venv/Lib/site-packages/pyarrow/tests/data/parquet/v0.7.1.parquet": "be6773848ce905b99192adc68f0c3b2aabab7d214db50b92a52203790566ab2b",
+      ".venv/Lib/site-packages/pyarrow/tests/data/parquet/v0.7.1.some-named-index.parquet": "5468128ea8a1091b5d07195471f3f9b3705247b69440aba45be6c68092dffc76",
+      "data/interim/billboard_song_level_2000_2024.parquet": "8eb042aca5dd7a012ce5858c0960290c215a4421102f8d08ca898633d3b60927",
+      "data/interim/grammy_soty_2000_2024.parquet": "06caee7786d4d8589882093880d487e6d17aba45bd9f7edc098e66a068e74fd7",
+      "data/interim/spotify_track_index.parquet": "49674843081015da6b5d0b5749d5267b70df0ec1f69833eb47ee250aa9763dab",
+      "data/raw/grammies_v4.csv": "6211e1a9292eaabc454b77e83e8ad2d016df311f2a21ccc00c051d7885c2e803",
+      "data/raw/hot100.csv": "d34b5b480cad9836e8d74e7dcc6408c814387c378d4e5ffa5ded4406700190c4",
+      "data/raw/songs_with_attributes_and_lyrics.csv": "698efaddfa802e1ba60010eaabcbb138bc017291f34bebaddb22f33ff490bd63",
+      "README.md": "cfd47e4965ae5abb324a05e7a6d2c49d316319fa7c0a758ddb94b580136a510c",
+      "reports/billboard_artist_normalization_collisions.csv": "b02d85a1ae0e04c7058dfae5ad226760e484f11c88dc338ed253238ce82a2e18",
+      "reports/billboard_duplicate_review.csv": "83f2c997a71bbb1cccd21ffa2bf004b1929a799a33b52243e2c3f7de319eea6e",
+      "reports/billboard_exclusions.csv": "efc4c26643c2ea2b83ecad445565a618b490e9ddca100cdfe83b4cd4d0d8ae89",
+      "reports/billboard_title_artist_normalization_collisions.csv": "ffbb741130c4b507bc8121f6ba22a72c701dd6b4e17a3acedbeaa72d01a2a7df",
+      "reports/billboard_title_normalization_collisions.csv": "9891ae7f70e758ce748ddf20e9efde42db3ea02472678d968f689ca8b19530a2",
+      "reports/grammy_artist_normalization_collisions.csv": "2b5c00c22ca24536c5abbb7944398317e4aefe39479d5d6ba99d25c0f6a2a3c3",
+      "reports/grammy_exclusions.csv": "1d42a8b05546bc25b30d293c05c8f6dbc5c7229561b3eb11d1926947a500c9de",
+      "reports/grammy_performer_review.csv": "774aaddf5cc555e6a78148b1a7467a818a5d2ae58bb0d5ee18246ac08d20cb1e",
+      "reports/grammy_title_artist_normalization_collisions.csv": "e95e9bae576213f8fcfe148477f9d829cd38664b8c509df9eff311bae2f8e6cf",
+      "reports/grammy_title_normalization_collisions.csv": "eea25a833281297d7ecae661102f4ad2e60decdf80685903723819613bffcc81",
+      "reports/preparation_summary.json": "1b42d2bbdd30657ed19066577e44a811d42b41770b7e7942d1877b245a52bbcf",
+      "reports/preparation_summary.md": "1cb3a9043daa5dc51bc0835ae8b85855869658a1df12450901d9e4326f14f3c8",
+      "reports/raw_profile.json": "430c7b752f2639de35ce3bb3edbd0950565090563341296e4799c1ee8b5ef0bc",
+      "reports/raw_profile.md": "9c2681bbd489e5ef159f769d46ab31f52dc8e0415529eb69fde8d7c413227cd0",
+      "reports/spotify_artist_normalization_collisions.csv": "c4fed05aaa9def60ea3ceed14eca9af8d6dc123f5faca28edf64ba9ed80b05db",
+      "reports/spotify_duplicate_id_review.csv": "f39881f3fbab595616010b942915cdb191635a3fad5339d7282c2076b325ba78",
+      "reports/spotify_exclusions.csv": "f0d7745ca76b70489759d044258b8374d84cdd4aad101c540de7944fc8a3e503",
+      "reports/spotify_multiple_versions_review.csv": "1348cc2844887b79964eac556f44beb5c78414a6538d64144ebabdcaf7848ca3",
+      "reports/spotify_title_artist_normalization_collisions.csv": "afdd09a8bff1e07a16409fe9104aad5cba05b4051a84ca088dde774c5ff28609",
+      "reports/spotify_title_normalization_collisions.csv": "bde8835fcc5c3a76b923c860c939830b805b35f83fae3485330dd87555098b7b",
+      "src/01_profile_raw_data.py": "637fd3b4e5e4e01cbb571d7968c8282336e3a82576b47e250e5f689f35a9fcc2",
+      "src/02_prepare_source_tables.py": "94ed178e7ed9e161a53d2031fa9aca358263c1f06247d0ab8b5e9385fb774ca4",
+      "src/music_success_nlp/__init__.py": "ba5534d837f5570fce48e593418cda3da7e292886ffd8a163e0d2661434b66ab",
+      "src/music_success_nlp/normalization.py": "99522c50317937cd1568f862e487b32a49b1f71902667ea116944aa82d80a967",
+      "tests/test_prepare_source_tables.py": "fad5ac57d3d2222e14f06ac24ef54bb56b4df7f726511388a564da8ef4ec0c64",
+      "tests/test_raw_profile.py": "0708782d722a26ff012bd9005ef78c7bb60ba4335d3580fb762048671d4ca1ba"
+    },
+    "all_unchanged": true
+  }
+}

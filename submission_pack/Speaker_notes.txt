@@ -1,0 +1,38 @@
+1. Do Lyrics Matter for Music Success?
+Timing: 0:30. Open with the question, then state the progress since 20 October. We have moved from an integrated and conservatively cleaned corpus to a repetition audit and an executed first modelling comparison. The objective is to use initial results to identify further preprocessing needs. Source: submitted research design, 18 October; previous presentation, 20 October; Stage 12 report and saved predictions, 1 November 2026.
+
+2. Progress since 20 October
+Timing: 1:00. The left column describes work already presented, so do not claim it as new. New work consists of independently checking the repetition detector and saved correction, demonstrating normalized unigram vector invariance, making provisional modelling choices and fitting/evaluating actual models. Professor feedback asked us to connect analytical output with further cleaning and to fit topics inside validation folds. Source: previous presentation and Stage 10–11 audit, followed by Stage 12 report.
+
+3. Analysis sample and target
+Timing: 1:00. One observation is a Billboard song–artist record first charting between 2000 and 2022. Starting with 6,546 records, we provisionally require the detector's existing top language label to be English. This excludes 161 records from modelling only and leaves 6,385. The sample still contains language uncertainty and code-switching. There are 984 Top-10 and 5,401 other songs. These are matched charting songs, not all released music. Source: Stage 12 report and independently checked out_of_fold_predictions.csv.
+
+4. Preprocessing decisions for the first models
+Timing: 1:30. Distinguish completed cleaning from modelling-specific representation. Existing cleaning normalizes Unicode/whitespace and removes verified standalone section labels and music-note-only lines. Raw text remains. Stage 11 applies one supported correction. For the first topic representation we use lowercase unigrams, a fixed stopword list with negation retention, and normalized linear TF-IDF. No lemmatization has been used. We omit length, lexical diversity and repetition as predictors because source transcription problems can distort them. Source: Stage 10–11 audit, Stage 12 report and supplied code.
+
+5. Whole-block repetition: evidence and treatment
+Timing: 1:30. A flag means that the entire normalized nonblank line sequence repeats an integer number of times. It does not establish an extraction error. Across the full prepared corpus there are 955 flags: one corrected, 954 unresolved. The English-screened sample contains 903 historical flags: one corrected, 902 unresolved. Fixed-fit normalized linear unigram vectors matched full versus one-unit text to numerical precision for all 955 flags. This supports this representation only, not semantic deletion or reliable song-length measures. Source: Stage 10–11 repetition audit and Stage 12 sample counts.
+
+6. Topic fitting inside each validation fold
+Timing: 1:30. We create five grouped folds and reuse them across models. In each fold, vectorizer.fit_transform sees training text only. NMF fits training TF-IDF only. Held-out text uses the saved vectorizer and NMF transform. Imputation, scaling and logistic regression also fit training rows only. The same fold-specific topic representation feeds the lyrics-only and combined classifiers. The all-data descriptive fit occurs after evaluation and never produces validation predictions. Groups link complete artist credits and known shared-text cases, but solo/collaborative performers can still cross folds. Source: supplied Stage 12 modelling script, main() and make_groups().
+
+7. NMF identifies patterns beyond semantic themes
+Timing: 1:00. NMF is a nonnegative factorization of the document–term matrix. The separate all-data descriptive fit has ten components. Five are dominated by vocal syllables/interjections. The love and affectionate-address labels are tentative and require reading representative lyrics. Diction is a vocabulary pattern, not proof of a genre or performer identity. NMF loadings are not probabilities. Descriptive component numbering cannot be mapped directly to independently fitted fold components. Source: descriptive_topics.csv and Stage 12 report.
+
+8. Adding lyric components improves preliminary AP
+Timing: 1:00. The primary metric is average precision, a summary of precision over recall thresholds. It is not accuracy or trapezoidal PR-AUC. Mean fold AP rises from 0.2334 for audio to 0.2527 for combined input. Topics alone score 0.1891 and the baseline 0.1541. The paired improvement is positive in every fold, averaging 0.0193. This is descriptive consistency, not a statistical significance test. ROC-AUC rises from 0.6281 to 0.6482. Source: independently recomputed from out_of_fold_predictions.csv.
+
+9. Initial results identify further cleaning needs
+Timing: 1:30. These are substantive preprocessing findings from the first analysis. Vocal syllables can dominate latent components, so we plan a documented alternative representation for semantic interpretation while retaining the original baseline. We will not automatically delete all interjections because they can contain useful stylistic signal. Independent regex testing demonstrated that the current two-character prefix mishandles contractions beginning with I: I'll becomes ll and I've becomes ve. The report's claim that fragments arise only from separated source text is incomplete. These are baseline results with a known tokenizer limitation. We have not rerun a corrected model or estimated its improvement. Source: descriptive topics, supplied TOKEN_PATTERN and independent Python re tests.
+
+10. Current conclusions and open decisions
+Timing: 1:30. We have enough progress for this interim submission. The provisional finding is that lyric-derived components add some information beyond ten audio features in this matched sample. We cannot conclude causality or that thematic meaning specifically drives the gain. Coverage varies by year and outcome. Grouping is incomplete at individual performer level. For the professor's proposed rank gap, excluding 11–15 would remove 330 negatives and leave 6,055 songs, but the cutoff is illustrative and no alternative model has been fitted. Ask whether they want a sensitivity analysis and which gap. Future changes informed by these results should be documented as development, with fresh evaluation design or a final untouched set for stronger final claims. Source: Stage 12 report and saved predictions.
+
+11. Appendix: actual cleaning examples
+Source: the already delivered 20 October presentation and Stage 10–11 audit. Counts are whitespace-delimited tokens, not linguistic word counts. These historical examples illustrate cleaning and were shown previously. The local submission helper adds actual text previews extracted from the source dataset.
+
+12. Appendix: paired fold results
+Source: out_of_fold_predictions.csv. AP and ROC-AUC were independently recalculated with tie-aware ranking calculations. Mean fold AP is an unweighted average of five folds. Repeated training records across folds prevent interpreting the five differences as independent experiments.
+
+13. Appendix: code and sample provenance
+Source: supplied script and report. The main code artifact is src/12_topics_and_top10_prediction.py. Earlier preprocessing code remains in src/09_prepare_analysis_sample.py, src/10_preprocess_lyrics.py and src/11_review_and_correct_full_block_repetition.py. The Stage 12 sample currently contains metadata only. A local packaging helper adds the existing source scripts and genuine source/cleaned/corrected text previews without rerunning models or editing datasets. The resulting course-submission sample should stay private.

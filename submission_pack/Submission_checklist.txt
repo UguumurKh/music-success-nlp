@@ -1,0 +1,55 @@
+PREPROCESSING I: SUBMISSION AND PRESENTATION
+
+1. Extract this pack into a new folder called submission_pack inside:
+   D:\Projects\music-success-nlp
+
+2. Open the existing project in VS Code. In its terminal, run once:
+   uv run python submission_pack/prepare_canvas_submission.py
+
+   This copies existing Stage 9–12 code, adds real source/cleaned/corrected
+   text previews, and creates a private Canvas ZIP under data/processed.
+   It does not rerun models, change lyrics, or push Git.
+   If filenames have changed, the script lists missing files before writing.
+
+3. Open the generated cleaned_data_sample_PRIVATE.csv and spot-check the
+   A.M. example (ID 369): full-text token counts should be 642 / 640 / 320.
+   The excerpts show the beginning of the text and may look identical.
+   Check that the copied code contains comments and the generated ZIP opens.
+
+4. Canvas: upload the generated ZIP if the assignment accepts ZIP files.
+   If multiple uploads are accepted instead, select:
+   - NLP_Preprocessing_I.pdf
+   - commented_code/*.py
+   - cleaned_data_sample_PRIVATE.csv
+   - sample_column_guide.txt
+   Include the PPTX only if useful or requested. Speaker notes are for you.
+   If only PDF is accepted, put sample previews/code excerpts in an appendix
+   and include a GitHub link to the executable code. Do not invent that URL.
+
+5. Keep the text sample/private ZIP out of public GitHub.
+   Commit the actual project code through your usual workflow after reviewing it.
+
+6. Rehearse slides 1–10 for 12 minutes. Slides 11–13 are question appendices.
+   The editable PPTX contains speaker notes. Speaker_notes.txt has the same guide.
+   Time budget: 0:30, 1:00, 1:00, 1:30, 1:30, 1:30, 1:00, 1:00, 1:30, 1:30.
+
+7. Verify the current Canvas due date and accepted extensions.
+   The supplied assignment says Monday at 08:00. For the next Monday this is
+   2 November 2026, 08:00 Budapest time, unless Canvas shows another date.
+   After uploading, check the submission receipt and uploaded file list.
+
+WHAT THE DOWNLOAD ALREADY CONTAINS
+- Editable presentation and PDF copy.
+- Speaker notes and this checklist.
+- Supplied Stage 12 modelling script as a baseline code copy.
+- Existing metadata-only sample, clearly named as such.
+- Packaging helper that adds earlier local code and actual cleaned-text previews.
+
+IMPORTANT CONTENT NOTES
+- The first model run uses the current tokenizer. Its I-contraction problem is
+  documented as a future revision, not claimed to be repaired.
+- AP improved from 0.2334 to 0.2527. This is not an accuracy percentage.
+- Topic components include vocal patterns as well as semantic vocabulary.
+- Source repetition flags do not prove extraction errors.
+- No gap-based models have been fitted. Excluding ranks 11–15 is illustrative.
+- The downloaded metadata CSV alone is not the cleaned-text sample.

@@ -1,0 +1,900 @@
+{
+  "decisions": [
+    "Comparison text applies only Unicode NFKC, casefold, whitespace collapse and trim. Punctuation, words and repetitions remain. Original raw lyrics are never modified; their original UTF-8 hash is retained.",
+    "IDs vote equally for comparison-lyric groups. Choose the largest group; break group ties with the lexicographically smallest ID across tied groups. Within the selected group choose its smallest ID. The ID is a reproducible technical tie-breaker, not evidence of the historically correct chart recording.",
+    "A unique largest group without a strict majority (e.g. 2–1–1) has low lyric confidence and an explicit unique-plurality flag. Medium requires >50% support. Missing/blank comparison lyrics are also low confidence. This closes the unspecified non-majority case without changing the requested selection rule.",
+    "Audio medians/minima/maxima/ranges use all distinct accepted IDs, never only the lyric group or representative. Missing/nonfinite numeric values are excluded per variable and flagged; all missing yields null. Key/mode are unique modes of original non-null values, with null on ties. Mixed named/numeric text encodings remain distinct; no recoding is performed.",
+    "Audio confidence is low for any missing audio or categorical tie, even for one ID; otherwise high for one ID or identical audio, and medium for differing audio. Complete audio consistency requires all fields observed. Full-tuple distinct counts and complete-only distinct counts are both reported.",
+    "Strict consistency is one ID OR identical comparison lyrics and one complete audio combination. Thus a single-ID row remains in the strict sample even if its audio is missing, as explicitly specified. The same output rows and flags support later lyrics-only, audio-only and combined models; no model-specific sample is created here.",
+    "Metadata/outcomes are attached after content-only consolidation. Outcomes are used only in post-consolidation descriptive counts. All accepted match methods are retained as source-level indicators; no outcome influences an ID vote, tie-break or audio aggregate.",
+    "Low-confidence review CSVs contain rows with low lyric OR low audio confidence. The per-candidate lyric ledger and all reports omit both raw lyrics and comparison text; only Parquet contains text. Earlier inputs/reports/code are hashed unchanged, while raw CSVs are not opened and are checked by size/mtime.",
+    "No fuzzy matching, NLP feature extraction or model training was performed. Comparison hashes/counts are consolidation diagnostics only. Outputs are consolidated song inputs, not a final joined modelling dataset."
+  ],
+  "outputs": [
+    "data/interim/billboard_song_level_consolidated.parquet",
+    "data/interim/grammy_song_level_consolidated.parquet",
+    "reports/song_input_consolidation.md",
+    "reports/song_input_consolidation.json",
+    "reports/billboard_low_confidence_consolidation.csv",
+    "reports/grammy_low_confidence_consolidation.csv",
+    "reports/lyric_selection_ledger.csv"
+  ],
+  "billboard": {
+    "source_records": 6639,
+    "single_id": 3719,
+    "multi_id": 2920,
+    "lyrics_consistent": 5330,
+    "audio_consistent": 4068,
+    "strict_consistency_sample_size": 3981,
+    "lyric_confidence": {
+      "high": 5330,
+      "medium": 482,
+      "low": 827
+    },
+    "audio_confidence": {
+      "high": 4068,
+      "medium": 1809,
+      "low": 762
+    },
+    "lyric_group_ties": 776,
+    "unique_plurality_without_majority": 51,
+    "key_ties": 761,
+    "mode_ties": 709,
+    "any_missing_audio": 0,
+    "candidate_id_count_distribution": [
+      {
+        "lyric_candidate_id_count": 1,
+        "len": 3719
+      },
+      {
+        "lyric_candidate_id_count": 2,
+        "len": 1841
+      },
+      {
+        "lyric_candidate_id_count": 3,
+        "len": 637
+      },
+      {
+        "lyric_candidate_id_count": 4,
+        "len": 244
+      },
+      {
+        "lyric_candidate_id_count": 5,
+        "len": 69
+      },
+      {
+        "lyric_candidate_id_count": 6,
+        "len": 46
+      },
+      {
+        "lyric_candidate_id_count": 7,
+        "len": 32
+      },
+      {
+        "lyric_candidate_id_count": 8,
+        "len": 12
+      },
+      {
+        "lyric_candidate_id_count": 9,
+        "len": 13
+      },
+      {
+        "lyric_candidate_id_count": 10,
+        "len": 7
+      },
+      {
+        "lyric_candidate_id_count": 11,
+        "len": 1
+      },
+      {
+        "lyric_candidate_id_count": 12,
+        "len": 5
+      },
+      {
+        "lyric_candidate_id_count": 14,
+        "len": 1
+      },
+      {
+        "lyric_candidate_id_count": 15,
+        "len": 2
+      },
+      {
+        "lyric_candidate_id_count": 16,
+        "len": 1
+      },
+      {
+        "lyric_candidate_id_count": 17,
+        "len": 1
+      },
+      {
+        "lyric_candidate_id_count": 18,
+        "len": 2
+      },
+      {
+        "lyric_candidate_id_count": 22,
+        "len": 1
+      },
+      {
+        "lyric_candidate_id_count": 23,
+        "len": 1
+      },
+      {
+        "lyric_candidate_id_count": 24,
+        "len": 1
+      },
+      {
+        "lyric_candidate_id_count": 27,
+        "len": 1
+      },
+      {
+        "lyric_candidate_id_count": 30,
+        "len": 1
+      },
+      {
+        "lyric_candidate_id_count": 32,
+        "len": 1
+      }
+    ],
+    "dominant_lyric_group_share": {
+      "median": 1.0,
+      "max": 1.0
+    },
+    "audio_range_summaries": {
+      "danceability": {
+        "mean": 0.008471456544660342,
+        "median": 0.0,
+        "max": 0.305,
+        "nonzero_records": 2018
+      },
+      "energy": {
+        "mean": 0.007735577647236031,
+        "median": 0.0,
+        "max": 0.6890000000000001,
+        "nonzero_records": 2000
+      },
+      "loudness": {
+        "mean": 0.18768157855098663,
+        "median": 0.0,
+        "max": 12.721,
+        "nonzero_records": 2003
+      },
+      "speechiness": {
+        "mean": 0.004304488627805393,
+        "median": 0.0,
+        "max": 0.506,
+        "nonzero_records": 2082
+      },
+      "acousticness": {
+        "mean": 0.007395873239945777,
+        "median": 0.0,
+        "max": 0.968483,
+        "nonzero_records": 2066
+      },
+      "instrumentalness": {
+        "mean": 0.0015661381593613498,
+        "median": 0.0,
+        "max": 0.95,
+        "nonzero_records": 1011
+      },
+      "liveness": {
+        "mean": 0.01296559722849827,
+        "median": 0.0,
+        "max": 0.8854,
+        "nonzero_records": 1958
+      },
+      "valence": {
+        "mean": 0.010162178038861274,
+        "median": 0.0,
+        "max": 0.636,
+        "nonzero_records": 2111
+      },
+      "tempo": {
+        "mean": 2.1863386052116285,
+        "median": 0.0,
+        "max": 104.10300000000001,
+        "nonzero_records": 2174
+      },
+      "duration_ms": {
+        "mean": 947.8880855550535,
+        "median": 0.0,
+        "max": 599960.0,
+        "nonzero_records": 1641
+      }
+    },
+    "outcome_field": "top10",
+    "full_sample_outcomes": {
+      "positive": 1000,
+      "negative": 5639
+    },
+    "strict_sample_outcomes": {
+      "positive": 416,
+      "negative": 3565
+    },
+    "low_confidence_review_records": 1309
+  },
+  "grammy": {
+    "source_records": 111,
+    "single_id": 29,
+    "multi_id": 82,
+    "lyrics_consistent": 62,
+    "audio_consistent": 37,
+    "strict_consistency_sample_size": 35,
+    "lyric_confidence": {
+      "high": 62,
+      "medium": 30,
+      "low": 19
+    },
+    "audio_confidence": {
+      "high": 37,
+      "medium": 61,
+      "low": 13
+    },
+    "lyric_group_ties": 16,
+    "unique_plurality_without_majority": 3,
+    "key_ties": 13,
+    "mode_ties": 12,
+    "any_missing_audio": 0,
+    "candidate_id_count_distribution": [
+      {
+        "lyric_candidate_id_count": 1,
+        "len": 29
+      },
+      {
+        "lyric_candidate_id_count": 2,
+        "len": 31
+      },
+      {
+        "lyric_candidate_id_count": 3,
+        "len": 22
+      },
+      {
+        "lyric_candidate_id_count": 4,
+        "len": 13
+      },
+      {
+        "lyric_candidate_id_count": 5,
+        "len": 3
+      },
+      {
+        "lyric_candidate_id_count": 6,
+        "len": 3
+      },
+      {
+        "lyric_candidate_id_count": 7,
+        "len": 5
+      },
+      {
+        "lyric_candidate_id_count": 8,
+        "len": 1
+      },
+      {
+        "lyric_candidate_id_count": 9,
+        "len": 1
+      },
+      {
+        "lyric_candidate_id_count": 10,
+        "len": 1
+      },
+      {
+        "lyric_candidate_id_count": 16,
+        "len": 1
+      },
+      {
+        "lyric_candidate_id_count": 18,
+        "len": 1
+      }
+    ],
+    "dominant_lyric_group_share": {
+      "median": 1.0,
+      "max": 1.0
+    },
+    "audio_range_summaries": {
+      "danceability": {
+        "mean": 0.02494594594594593,
+        "median": 0.001000000000000112,
+        "max": 0.21000000000000002,
+        "nonzero_records": 65
+      },
+      "energy": {
+        "mean": 0.02245045045045045,
+        "median": 0.0030000000000000027,
+        "max": 0.41500000000000004,
+        "nonzero_records": 66
+      },
+      "loudness": {
+        "mean": 0.5946756756756756,
+        "median": 0.01399999999999979,
+        "max": 12.721,
+        "nonzero_records": 63
+      },
+      "speechiness": {
+        "mean": 0.009163063063063064,
+        "median": 0.00030000000000000165,
+        "max": 0.21900000000000003,
+        "nonzero_records": 64
+      },
+      "acousticness": {
+        "mean": 0.022483783783783778,
+        "median": 0.002,
+        "max": 0.595,
+        "nonzero_records": 66
+      },
+      "instrumentalness": {
+        "mean": 0.0012226374774774779,
+        "median": 0.0,
+        "max": 0.0539,
+        "nonzero_records": 35
+      },
+      "liveness": {
+        "mean": 0.019327927927927927,
+        "median": 0.0010000000000000009,
+        "max": 0.5603,
+        "nonzero_records": 61
+      },
+      "valence": {
+        "mean": 0.021991891891891897,
+        "median": 0.0030000000000000027,
+        "max": 0.4939999999999999,
+        "nonzero_records": 67
+      },
+      "tempo": {
+        "mean": 6.178810810810812,
+        "median": 0.010000000000005116,
+        "max": 89.98100000000001,
+        "nonzero_records": 68
+      },
+      "duration_ms": {
+        "mean": 1271.1801801801803,
+        "median": 0.0,
+        "max": 24843.0,
+        "nonzero_records": 52
+      }
+    },
+    "outcome_field": "grammy_winner",
+    "full_sample_outcomes": {
+      "positive": 18,
+      "negative": 93
+    },
+    "strict_sample_outcomes": {
+      "positive": 4,
+      "negative": 31
+    },
+    "low_confidence_review_records": 28
+  },
+  "integrity": {
+    "before": {
+      "data/raw/grammies_v4.csv": {
+        "bytes": 4196575,
+        "mtime_ns": 1789425082663706300
+      },
+      "data/raw/hot100.csv": {
+        "bytes": 38358645,
+        "mtime_ns": 1791132196350432200
+      },
+      "data/raw/songs_with_attributes_and_lyrics.csv": {
+        "bytes": 1545144675,
+        "mtime_ns": 1791132772000000000
+      },
+      "data/interim/billboard_grammy_accepted_pairs.parquet": {
+        "sha256": "ab13e516e69522388d214a7dd6b144a5f35ea24e89c8d7a39dfbf24cf899dcb1"
+      },
+      "data/interim/billboard_grammy_exact_candidates.parquet": {
+        "sha256": "ab13e516e69522388d214a7dd6b144a5f35ea24e89c8d7a39dfbf24cf899dcb1"
+      },
+      "data/interim/billboard_grammy_variant_candidates.parquet": {
+        "sha256": "f23909fdfcc2c0d09a7c69df38e02b49915232acbad5416ebbe17ff2331688bb"
+      },
+      "data/interim/billboard_song_level_2000_2024.parquet": {
+        "sha256": "8eb042aca5dd7a012ce5858c0960290c215a4421102f8d08ca898633d3b60927"
+      },
+      "data/interim/billboard_spotify_accepted_candidates.parquet": {
+        "sha256": "7d5122b82b03d59a371c3631d06cf23a50461eb8bd0f8d2fdb8433cad5145ae1"
+      },
+      "data/interim/billboard_spotify_exact_candidates.parquet": {
+        "sha256": "4c5b26c50a61b86d63a7c814e7f87c3f3bf95aec62cb0445ad6220716821737b"
+      },
+      "data/interim/billboard_spotify_variant_candidates.parquet": {
+        "sha256": "873d2c25a44a7ca4a637f4926abd3e5827da79d07bc92b556b24b6dfece8e264"
+      },
+      "data/interim/grammy_soty_2000_2024.parquet": {
+        "sha256": "06caee7786d4d8589882093880d487e6d17aba45bd9f7edc098e66a068e74fd7"
+      },
+      "data/interim/grammy_soty_enriched_2000_2024.parquet": {
+        "sha256": "57dbeb0d4c7a7a9e227f400e6c8bbbd5893388051cbeadd84311dda8f0b64428"
+      },
+      "data/interim/grammy_spotify_accepted_candidates.parquet": {
+        "sha256": "e84574c82e34fb7d82b020efc2e0cddc878fc4911ba9fc5364a772eb6c2ff42e"
+      },
+      "data/interim/grammy_spotify_exact_candidates.parquet": {
+        "sha256": "049c6e8504b738f74c4369e5faa29d962e06e6acf3884cdcbdc83cb533d9acdd"
+      },
+      "data/interim/grammy_spotify_variant_candidates.parquet": {
+        "sha256": "1c0e8ba758767084f9235ebb0b51461fede1b331a6a40d5738beefd01037bb66"
+      },
+      "data/interim/spotify_accepted_candidate_content.parquet": {
+        "sha256": "1d4a007d31be299c038d021aea048a6b62c470067fee5e521a65358d9bdf8a43"
+      },
+      "data/interim/spotify_track_index.parquet": {
+        "sha256": "49674843081015da6b5d0b5749d5267b70df0ec1f69833eb47ee250aa9763dab"
+      },
+      "README.md": {
+        "sha256": "cfd47e4965ae5abb324a05e7a6d2c49d316319fa7c0a758ddb94b580136a510c"
+      },
+      "reports/billboard_artist_normalization_collisions.csv": {
+        "sha256": "b02d85a1ae0e04c7058dfae5ad226760e484f11c88dc338ed253238ce82a2e18"
+      },
+      "reports/billboard_duplicate_review.csv": {
+        "sha256": "83f2c997a71bbb1cccd21ffa2bf004b1929a799a33b52243e2c3f7de319eea6e"
+      },
+      "reports/billboard_exclusions.csv": {
+        "sha256": "efc4c26643c2ea2b83ecad445565a618b490e9ddca100cdfe83b4cd4d0d8ae89"
+      },
+      "reports/billboard_grammy_variant_manual_review.csv": {
+        "sha256": "ac6523e5bea2c252987a0f7a49601b6ae5bab2f273658fe115557c7d6d58436a"
+      },
+      "reports/billboard_grammy_variant_review.csv": {
+        "sha256": "cc728964248dc05ecaf77b9434bf03bf3acc3796f3310de4b45a28933e37a1d4"
+      },
+      "reports/billboard_grammy_year_gap_review.csv": {
+        "sha256": "ae5eeca67c9500744925845524c908bb6901d58e2a3885e8618d3c6f4d0d0720"
+      },
+      "reports/billboard_sing_collision_detail.csv": {
+        "sha256": "78a61825abb00ec8557962c2aafd05f1a6fa301f217250682c0b27a2389842ee"
+      },
+      "reports/billboard_spotify_ambiguous.csv": {
+        "sha256": "7ecebd04714a4e7992c359c6865b4440b629946bcb7b30de16a150ba541141b4"
+      },
+      "reports/billboard_spotify_consolidation_status.csv": {
+        "sha256": "02814ba92123d0dde8db22913492ec05021fa3ce05953a700769b783b34d7e42"
+      },
+      "reports/billboard_spotify_unmatched.csv": {
+        "sha256": "97fb8a83d4711f42254139efff18e3a0bd40b7b6e5384899dce5feca93aee326"
+      },
+      "reports/billboard_spotify_variant_review.csv": {
+        "sha256": "154fdee53e4613b0ce5b36fb6f6e4356bde147b063178dcb603760f98ad16b59"
+      },
+      "reports/billboard_title_artist_normalization_collisions.csv": {
+        "sha256": "ffbb741130c4b507bc8121f6ba22a72c701dd6b4e17a3acedbeaa72d01a2a7df"
+      },
+      "reports/billboard_title_normalization_collisions.csv": {
+        "sha256": "9891ae7f70e758ce748ddf20e9efde42db3ea02472678d968f689ca8b19530a2"
+      },
+      "reports/billboard_unmatched_diagnosis.csv": {
+        "sha256": "8c16d0c00db44bcffc1fd4cdb3732f3b543656811af6d1a7bc37f042f0a10843"
+      },
+      "reports/candidate_content_extraction.json": {
+        "sha256": "703b76720e6149d59975bfaa8107e40452171f6fd94d3bc460a211ea4d9c52b2"
+      },
+      "reports/candidate_content_extraction.md": {
+        "sha256": "98d7c6a9488e13433dbdb88d1bad5c913e65003fd308dfe1f2db7fef27d9907b"
+      },
+      "reports/candidate_content_validation_failures.csv": {
+        "sha256": "b732de89228d9ba4be3427a5db8b042aabc2ab1307844d5fcf05abb9a8a1944c"
+      },
+      "reports/candidate_id_extraction_ledger.csv": {
+        "sha256": "bf0aa33a05fb59450e742116a46e6d5c5703b55dad35534dc5f70e5e191d7baf"
+      },
+      "reports/exact_match_audit.json": {
+        "sha256": "7c033da097762a257eb782c2ddbe88e23db32cfd27405aa5f5c6d7105a63e4e0"
+      },
+      "reports/exact_match_audit.md": {
+        "sha256": "41d850a881eb411f42169cafd1a840e214922f3e0ab57874f46c939a5267b5ae"
+      },
+      "reports/grammy_artist_normalization_collisions.csv": {
+        "sha256": "2b5c00c22ca24536c5abbb7944398317e4aefe39479d5d6ba99d25c0f6a2a3c3"
+      },
+      "reports/grammy_exclusions.csv": {
+        "sha256": "1d42a8b05546bc25b30d293c05c8f6dbc5c7229561b3eb11d1926947a500c9de"
+      },
+      "reports/grammy_performer_parse_audit.csv": {
+        "sha256": "efb4c1859a596064f948b3f306123b4d39dd28bdd2cea1be44883cd88527b4e1"
+      },
+      "reports/grammy_performer_review.csv": {
+        "sha256": "774aaddf5cc555e6a78148b1a7467a818a5d2ae58bb0d5ee18246ac08d20cb1e"
+      },
+      "reports/grammy_spotify_ambiguous.csv": {
+        "sha256": "79235672de5851a5776ae8ed8bfb5fad90eec28fe0f9b7950d039b2784182894"
+      },
+      "reports/grammy_spotify_consolidation_status.csv": {
+        "sha256": "2452798a3120a3d2c992981455f66791fcc881684d1e9a1b8d068ef3406dc537"
+      },
+      "reports/grammy_spotify_unmatched.csv": {
+        "sha256": "d90a343ea41bc767ff712d47691e486c7122a7b4226cdd4572856954c693c9b2"
+      },
+      "reports/grammy_spotify_variant_review.csv": {
+        "sha256": "3027214eed74915f12b94af6acd8868fdb751d116951e7a8e054647ca0e79235"
+      },
+      "reports/grammy_title_artist_normalization_collisions.csv": {
+        "sha256": "e95e9bae576213f8fcfe148477f9d829cd38664b8c509df9eff311bae2f8e6cf"
+      },
+      "reports/grammy_title_normalization_collisions.csv": {
+        "sha256": "eea25a833281297d7ecae661102f4ad2e60decdf80685903723819613bffcc81"
+      },
+      "reports/grammy_unmatched_diagnosis.csv": {
+        "sha256": "1fe370d2fadf0de2d90c6f00c0b5fbe30f22366f1e37c4fe924cb11988b5f0d0"
+      },
+      "reports/match_expansion_audit.json": {
+        "sha256": "e3780ae99e00c6a1865a270d7960a59462cd349a30b0f5153bad4d373c0ed2f5"
+      },
+      "reports/match_expansion_audit.md": {
+        "sha256": "029edd52420b036e1b25e5447748395f56efd41be80224f75de1eca3fac1c9f2"
+      },
+      "reports/match_policy_audit.json": {
+        "sha256": "f1bdbf1d997710719105ff46772b63bdfd413cc2225d41b2106e5d2a17b1a5d4"
+      },
+      "reports/match_policy_audit.md": {
+        "sha256": "2a3b0fbfc57ff46a12b551a4094d64cf54b687ae3639c6ff027bea27c9761cd3"
+      },
+      "reports/pre_match_audit.json": {
+        "sha256": "23aedacee318e2c181c93f6caac29473ba563798de872ce2a46ab4d03e6755ae"
+      },
+      "reports/pre_match_audit.md": {
+        "sha256": "dfb8f201726f24905fb24283dd7cfc3fcd0cce840152e2ca37650d13ef85b50d"
+      },
+      "reports/preparation_summary.json": {
+        "sha256": "1b42d2bbdd30657ed19066577e44a811d42b41770b7e7942d1877b245a52bbcf"
+      },
+      "reports/preparation_summary.md": {
+        "sha256": "1cb3a9043daa5dc51bc0835ae8b85855869658a1df12450901d9e4326f14f3c8"
+      },
+      "reports/raw_profile.json": {
+        "sha256": "430c7b752f2639de35ce3bb3edbd0950565090563341296e4799c1ee8b5ef0bc"
+      },
+      "reports/raw_profile.md": {
+        "sha256": "9c2681bbd489e5ef159f769d46ab31f52dc8e0415529eb69fde8d7c413227cd0"
+      },
+      "reports/source_normalization_collision_quarantine.csv": {
+        "sha256": "15ec771c5935b4810e599808a8ed59ffd51bdcd39b4c02370a9f3031e5bd6764"
+      },
+      "reports/spotify_artist_normalization_collisions.csv": {
+        "sha256": "c4fed05aaa9def60ea3ceed14eca9af8d6dc123f5faca28edf64ba9ed80b05db"
+      },
+      "reports/spotify_duplicate_id_review.csv": {
+        "sha256": "f39881f3fbab595616010b942915cdb191635a3fad5339d7282c2076b325ba78"
+      },
+      "reports/spotify_exclusions.csv": {
+        "sha256": "f0d7745ca76b70489759d044258b8374d84cdd4aad101c540de7944fc8a3e503"
+      },
+      "reports/spotify_multiple_versions_review.csv": {
+        "sha256": "1348cc2844887b79964eac556f44beb5c78414a6538d64144ebabdcaf7848ca3"
+      },
+      "reports/spotify_title_artist_normalization_collisions.csv": {
+        "sha256": "afdd09a8bff1e07a16409fe9104aad5cba05b4051a84ca088dde774c5ff28609"
+      },
+      "reports/spotify_title_normalization_collisions.csv": {
+        "sha256": "bde8835fcc5c3a76b923c860c939830b805b35f83fae3485330dd87555098b7b"
+      },
+      "reports/tier1_manual_review.csv": {
+        "sha256": "25825ba8255b85dab61d2e491d6105e3f12efcff0957cd8bd4564a1ce037b5d1"
+      },
+      "reports/title_version_candidates_not_accepted.csv": {
+        "sha256": "5c795cd72728977960fae9412aed0fb1594ce861da96f92651dd349beb0cb403"
+      },
+      "reports/variant_collision_review.csv": {
+        "sha256": "b4245662a767e41413dd2e39bbee90a8a6cfc3fd4fa22637530bdfe8c2ed3b6f"
+      },
+      "src/01_profile_raw_data.py": {
+        "sha256": "637fd3b4e5e4e01cbb571d7968c8282336e3a82576b47e250e5f689f35a9fcc2"
+      },
+      "src/02_prepare_source_tables.py": {
+        "sha256": "94ed178e7ed9e161a53d2031fa9aca358263c1f06247d0ab8b5e9385fb774ca4"
+      },
+      "src/02b_pre_match_audit.py": {
+        "sha256": "f5347f5c638f076954d9e414c5c9bf0a8a1d0e53c3c2980a4dd466b1ab446c05"
+      },
+      "src/03_exact_match_audit.py": {
+        "sha256": "8bee0480a64f2e10bae43dcd1bef659e2ccf2cc67d4331ef134571323e08ada7"
+      },
+      "src/04_match_expansion_audit.py": {
+        "sha256": "04c8a80e10a743161522287857e4b998e6bf908cff24bf7d7c21b6d0720c2e4c"
+      },
+      "src/05_apply_match_policy.py": {
+        "sha256": "c2d8342ee1a836de7fa964cd3bef367de62a9ea9e44f401b3311db310ad180de"
+      },
+      "src/06_extract_candidate_content.py": {
+        "sha256": "4a6a6eb789500adf690f354deb3c6fe2f21d76bf96f10cf857997ac5a7fb3178"
+      },
+      "src/music_success_nlp/__init__.py": {
+        "sha256": "ba5534d837f5570fce48e593418cda3da7e292886ffd8a163e0d2661434b66ab"
+      },
+      "src/music_success_nlp/normalization.py": {
+        "sha256": "99522c50317937cd1568f862e487b32a49b1f71902667ea116944aa82d80a967"
+      },
+      "tests/test_apply_match_policy.py": {
+        "sha256": "ed34d16c7ba8203401cd950bdc87620b4e587ca865773c2bdaea23bc820ef062"
+      },
+      "tests/test_exact_match_audit.py": {
+        "sha256": "30980ea175e9f8ea8a32dfb0a4b233a0bf5019c9c7e0e9c72c3688e4b32a77a2"
+      },
+      "tests/test_extract_candidate_content.py": {
+        "sha256": "4cfc18f4050fdeeb9629dc0292b2e3945e83bdc83f8e272ff13c88b22081f072"
+      },
+      "tests/test_match_expansion_audit.py": {
+        "sha256": "d678ae9f3b0ebae35cbfefc5a8ee86a9de214cfc4a181fbdffd37f6f78502745"
+      },
+      "tests/test_pre_match_audit.py": {
+        "sha256": "5d134d2a1ba59db690db05479483bc4876bd165765c4b0f3b35551811f2f38e3"
+      },
+      "tests/test_prepare_source_tables.py": {
+        "sha256": "fad5ac57d3d2222e14f06ac24ef54bb56b4df7f726511388a564da8ef4ec0c64"
+      },
+      "tests/test_raw_profile.py": {
+        "sha256": "0708782d722a26ff012bd9005ef78c7bb60ba4335d3580fb762048671d4ca1ba"
+      }
+    },
+    "after": {
+      "data/raw/grammies_v4.csv": {
+        "bytes": 4196575,
+        "mtime_ns": 1789425082663706300
+      },
+      "data/raw/hot100.csv": {
+        "bytes": 38358645,
+        "mtime_ns": 1791132196350432200
+      },
+      "data/raw/songs_with_attributes_and_lyrics.csv": {
+        "bytes": 1545144675,
+        "mtime_ns": 1791132772000000000
+      },
+      "data/interim/billboard_grammy_accepted_pairs.parquet": {
+        "sha256": "ab13e516e69522388d214a7dd6b144a5f35ea24e89c8d7a39dfbf24cf899dcb1"
+      },
+      "data/interim/billboard_grammy_exact_candidates.parquet": {
+        "sha256": "ab13e516e69522388d214a7dd6b144a5f35ea24e89c8d7a39dfbf24cf899dcb1"
+      },
+      "data/interim/billboard_grammy_variant_candidates.parquet": {
+        "sha256": "f23909fdfcc2c0d09a7c69df38e02b49915232acbad5416ebbe17ff2331688bb"
+      },
+      "data/interim/billboard_song_level_2000_2024.parquet": {
+        "sha256": "8eb042aca5dd7a012ce5858c0960290c215a4421102f8d08ca898633d3b60927"
+      },
+      "data/interim/billboard_spotify_accepted_candidates.parquet": {
+        "sha256": "7d5122b82b03d59a371c3631d06cf23a50461eb8bd0f8d2fdb8433cad5145ae1"
+      },
+      "data/interim/billboard_spotify_exact_candidates.parquet": {
+        "sha256": "4c5b26c50a61b86d63a7c814e7f87c3f3bf95aec62cb0445ad6220716821737b"
+      },
+      "data/interim/billboard_spotify_variant_candidates.parquet": {
+        "sha256": "873d2c25a44a7ca4a637f4926abd3e5827da79d07bc92b556b24b6dfece8e264"
+      },
+      "data/interim/grammy_soty_2000_2024.parquet": {
+        "sha256": "06caee7786d4d8589882093880d487e6d17aba45bd9f7edc098e66a068e74fd7"
+      },
+      "data/interim/grammy_soty_enriched_2000_2024.parquet": {
+        "sha256": "57dbeb0d4c7a7a9e227f400e6c8bbbd5893388051cbeadd84311dda8f0b64428"
+      },
+      "data/interim/grammy_spotify_accepted_candidates.parquet": {
+        "sha256": "e84574c82e34fb7d82b020efc2e0cddc878fc4911ba9fc5364a772eb6c2ff42e"
+      },
+      "data/interim/grammy_spotify_exact_candidates.parquet": {
+        "sha256": "049c6e8504b738f74c4369e5faa29d962e06e6acf3884cdcbdc83cb533d9acdd"
+      },
+      "data/interim/grammy_spotify_variant_candidates.parquet": {
+        "sha256": "1c0e8ba758767084f9235ebb0b51461fede1b331a6a40d5738beefd01037bb66"
+      },
+      "data/interim/spotify_accepted_candidate_content.parquet": {
+        "sha256": "1d4a007d31be299c038d021aea048a6b62c470067fee5e521a65358d9bdf8a43"
+      },
+      "data/interim/spotify_track_index.parquet": {
+        "sha256": "49674843081015da6b5d0b5749d5267b70df0ec1f69833eb47ee250aa9763dab"
+      },
+      "README.md": {
+        "sha256": "cfd47e4965ae5abb324a05e7a6d2c49d316319fa7c0a758ddb94b580136a510c"
+      },
+      "reports/billboard_artist_normalization_collisions.csv": {
+        "sha256": "b02d85a1ae0e04c7058dfae5ad226760e484f11c88dc338ed253238ce82a2e18"
+      },
+      "reports/billboard_duplicate_review.csv": {
+        "sha256": "83f2c997a71bbb1cccd21ffa2bf004b1929a799a33b52243e2c3f7de319eea6e"
+      },
+      "reports/billboard_exclusions.csv": {
+        "sha256": "efc4c26643c2ea2b83ecad445565a618b490e9ddca100cdfe83b4cd4d0d8ae89"
+      },
+      "reports/billboard_grammy_variant_manual_review.csv": {
+        "sha256": "ac6523e5bea2c252987a0f7a49601b6ae5bab2f273658fe115557c7d6d58436a"
+      },
+      "reports/billboard_grammy_variant_review.csv": {
+        "sha256": "cc728964248dc05ecaf77b9434bf03bf3acc3796f3310de4b45a28933e37a1d4"
+      },
+      "reports/billboard_grammy_year_gap_review.csv": {
+        "sha256": "ae5eeca67c9500744925845524c908bb6901d58e2a3885e8618d3c6f4d0d0720"
+      },
+      "reports/billboard_sing_collision_detail.csv": {
+        "sha256": "78a61825abb00ec8557962c2aafd05f1a6fa301f217250682c0b27a2389842ee"
+      },
+      "reports/billboard_spotify_ambiguous.csv": {
+        "sha256": "7ecebd04714a4e7992c359c6865b4440b629946bcb7b30de16a150ba541141b4"
+      },
+      "reports/billboard_spotify_consolidation_status.csv": {
+        "sha256": "02814ba92123d0dde8db22913492ec05021fa3ce05953a700769b783b34d7e42"
+      },
+      "reports/billboard_spotify_unmatched.csv": {
+        "sha256": "97fb8a83d4711f42254139efff18e3a0bd40b7b6e5384899dce5feca93aee326"
+      },
+      "reports/billboard_spotify_variant_review.csv": {
+        "sha256": "154fdee53e4613b0ce5b36fb6f6e4356bde147b063178dcb603760f98ad16b59"
+      },
+      "reports/billboard_title_artist_normalization_collisions.csv": {
+        "sha256": "ffbb741130c4b507bc8121f6ba22a72c701dd6b4e17a3acedbeaa72d01a2a7df"
+      },
+      "reports/billboard_title_normalization_collisions.csv": {
+        "sha256": "9891ae7f70e758ce748ddf20e9efde42db3ea02472678d968f689ca8b19530a2"
+      },
+      "reports/billboard_unmatched_diagnosis.csv": {
+        "sha256": "8c16d0c00db44bcffc1fd4cdb3732f3b543656811af6d1a7bc37f042f0a10843"
+      },
+      "reports/candidate_content_extraction.json": {
+        "sha256": "703b76720e6149d59975bfaa8107e40452171f6fd94d3bc460a211ea4d9c52b2"
+      },
+      "reports/candidate_content_extraction.md": {
+        "sha256": "98d7c6a9488e13433dbdb88d1bad5c913e65003fd308dfe1f2db7fef27d9907b"
+      },
+      "reports/candidate_content_validation_failures.csv": {
+        "sha256": "b732de89228d9ba4be3427a5db8b042aabc2ab1307844d5fcf05abb9a8a1944c"
+      },
+      "reports/candidate_id_extraction_ledger.csv": {
+        "sha256": "bf0aa33a05fb59450e742116a46e6d5c5703b55dad35534dc5f70e5e191d7baf"
+      },
+      "reports/exact_match_audit.json": {
+        "sha256": "7c033da097762a257eb782c2ddbe88e23db32cfd27405aa5f5c6d7105a63e4e0"
+      },
+      "reports/exact_match_audit.md": {
+        "sha256": "41d850a881eb411f42169cafd1a840e214922f3e0ab57874f46c939a5267b5ae"
+      },
+      "reports/grammy_artist_normalization_collisions.csv": {
+        "sha256": "2b5c00c22ca24536c5abbb7944398317e4aefe39479d5d6ba99d25c0f6a2a3c3"
+      },
+      "reports/grammy_exclusions.csv": {
+        "sha256": "1d42a8b05546bc25b30d293c05c8f6dbc5c7229561b3eb11d1926947a500c9de"
+      },
+      "reports/grammy_performer_parse_audit.csv": {
+        "sha256": "efb4c1859a596064f948b3f306123b4d39dd28bdd2cea1be44883cd88527b4e1"
+      },
+      "reports/grammy_performer_review.csv": {
+        "sha256": "774aaddf5cc555e6a78148b1a7467a818a5d2ae58bb0d5ee18246ac08d20cb1e"
+      },
+      "reports/grammy_spotify_ambiguous.csv": {
+        "sha256": "79235672de5851a5776ae8ed8bfb5fad90eec28fe0f9b7950d039b2784182894"
+      },
+      "reports/grammy_spotify_consolidation_status.csv": {
+        "sha256": "2452798a3120a3d2c992981455f66791fcc881684d1e9a1b8d068ef3406dc537"
+      },
+      "reports/grammy_spotify_unmatched.csv": {
+        "sha256": "d90a343ea41bc767ff712d47691e486c7122a7b4226cdd4572856954c693c9b2"
+      },
+      "reports/grammy_spotify_variant_review.csv": {
+        "sha256": "3027214eed74915f12b94af6acd8868fdb751d116951e7a8e054647ca0e79235"
+      },
+      "reports/grammy_title_artist_normalization_collisions.csv": {
+        "sha256": "e95e9bae576213f8fcfe148477f9d829cd38664b8c509df9eff311bae2f8e6cf"
+      },
+      "reports/grammy_title_normalization_collisions.csv": {
+        "sha256": "eea25a833281297d7ecae661102f4ad2e60decdf80685903723819613bffcc81"
+      },
+      "reports/grammy_unmatched_diagnosis.csv": {
+        "sha256": "1fe370d2fadf0de2d90c6f00c0b5fbe30f22366f1e37c4fe924cb11988b5f0d0"
+      },
+      "reports/match_expansion_audit.json": {
+        "sha256": "e3780ae99e00c6a1865a270d7960a59462cd349a30b0f5153bad4d373c0ed2f5"
+      },
+      "reports/match_expansion_audit.md": {
+        "sha256": "029edd52420b036e1b25e5447748395f56efd41be80224f75de1eca3fac1c9f2"
+      },
+      "reports/match_policy_audit.json": {
+        "sha256": "f1bdbf1d997710719105ff46772b63bdfd413cc2225d41b2106e5d2a17b1a5d4"
+      },
+      "reports/match_policy_audit.md": {
+        "sha256": "2a3b0fbfc57ff46a12b551a4094d64cf54b687ae3639c6ff027bea27c9761cd3"
+      },
+      "reports/pre_match_audit.json": {
+        "sha256": "23aedacee318e2c181c93f6caac29473ba563798de872ce2a46ab4d03e6755ae"
+      },
+      "reports/pre_match_audit.md": {
+        "sha256": "dfb8f201726f24905fb24283dd7cfc3fcd0cce840152e2ca37650d13ef85b50d"
+      },
+      "reports/preparation_summary.json": {
+        "sha256": "1b42d2bbdd30657ed19066577e44a811d42b41770b7e7942d1877b245a52bbcf"
+      },
+      "reports/preparation_summary.md": {
+        "sha256": "1cb3a9043daa5dc51bc0835ae8b85855869658a1df12450901d9e4326f14f3c8"
+      },
+      "reports/raw_profile.json": {
+        "sha256": "430c7b752f2639de35ce3bb3edbd0950565090563341296e4799c1ee8b5ef0bc"
+      },
+      "reports/raw_profile.md": {
+        "sha256": "9c2681bbd489e5ef159f769d46ab31f52dc8e0415529eb69fde8d7c413227cd0"
+      },
+      "reports/source_normalization_collision_quarantine.csv": {
+        "sha256": "15ec771c5935b4810e599808a8ed59ffd51bdcd39b4c02370a9f3031e5bd6764"
+      },
+      "reports/spotify_artist_normalization_collisions.csv": {
+        "sha256": "c4fed05aaa9def60ea3ceed14eca9af8d6dc123f5faca28edf64ba9ed80b05db"
+      },
+      "reports/spotify_duplicate_id_review.csv": {
+        "sha256": "f39881f3fbab595616010b942915cdb191635a3fad5339d7282c2076b325ba78"
+      },
+      "reports/spotify_exclusions.csv": {
+        "sha256": "f0d7745ca76b70489759d044258b8374d84cdd4aad101c540de7944fc8a3e503"
+      },
+      "reports/spotify_multiple_versions_review.csv": {
+        "sha256": "1348cc2844887b79964eac556f44beb5c78414a6538d64144ebabdcaf7848ca3"
+      },
+      "reports/spotify_title_artist_normalization_collisions.csv": {
+        "sha256": "afdd09a8bff1e07a16409fe9104aad5cba05b4051a84ca088dde774c5ff28609"
+      },
+      "reports/spotify_title_normalization_collisions.csv": {
+        "sha256": "bde8835fcc5c3a76b923c860c939830b805b35f83fae3485330dd87555098b7b"
+      },
+      "reports/tier1_manual_review.csv": {
+        "sha256": "25825ba8255b85dab61d2e491d6105e3f12efcff0957cd8bd4564a1ce037b5d1"
+      },
+      "reports/title_version_candidates_not_accepted.csv": {
+        "sha256": "5c795cd72728977960fae9412aed0fb1594ce861da96f92651dd349beb0cb403"
+      },
+      "reports/variant_collision_review.csv": {
+        "sha256": "b4245662a767e41413dd2e39bbee90a8a6cfc3fd4fa22637530bdfe8c2ed3b6f"
+      },
+      "src/01_profile_raw_data.py": {
+        "sha256": "637fd3b4e5e4e01cbb571d7968c8282336e3a82576b47e250e5f689f35a9fcc2"
+      },
+      "src/02_prepare_source_tables.py": {
+        "sha256": "94ed178e7ed9e161a53d2031fa9aca358263c1f06247d0ab8b5e9385fb774ca4"
+      },
+      "src/02b_pre_match_audit.py": {
+        "sha256": "f5347f5c638f076954d9e414c5c9bf0a8a1d0e53c3c2980a4dd466b1ab446c05"
+      },
+      "src/03_exact_match_audit.py": {
+        "sha256": "8bee0480a64f2e10bae43dcd1bef659e2ccf2cc67d4331ef134571323e08ada7"
+      },
+      "src/04_match_expansion_audit.py": {
+        "sha256": "04c8a80e10a743161522287857e4b998e6bf908cff24bf7d7c21b6d0720c2e4c"
+      },
+      "src/05_apply_match_policy.py": {
+        "sha256": "c2d8342ee1a836de7fa964cd3bef367de62a9ea9e44f401b3311db310ad180de"
+      },
+      "src/06_extract_candidate_content.py": {
+        "sha256": "4a6a6eb789500adf690f354deb3c6fe2f21d76bf96f10cf857997ac5a7fb3178"
+      },
+      "src/music_success_nlp/__init__.py": {
+        "sha256": "ba5534d837f5570fce48e593418cda3da7e292886ffd8a163e0d2661434b66ab"
+      },
+      "src/music_success_nlp/normalization.py": {
+        "sha256": "99522c50317937cd1568f862e487b32a49b1f71902667ea116944aa82d80a967"
+      },
+      "tests/test_apply_match_policy.py": {
+        "sha256": "ed34d16c7ba8203401cd950bdc87620b4e587ca865773c2bdaea23bc820ef062"
+      },
+      "tests/test_exact_match_audit.py": {
+        "sha256": "30980ea175e9f8ea8a32dfb0a4b233a0bf5019c9c7e0e9c72c3688e4b32a77a2"
+      },
+      "tests/test_extract_candidate_content.py": {
+        "sha256": "4cfc18f4050fdeeb9629dc0292b2e3945e83bdc83f8e272ff13c88b22081f072"
+      },
+      "tests/test_match_expansion_audit.py": {
+        "sha256": "d678ae9f3b0ebae35cbfefc5a8ee86a9de214cfc4a181fbdffd37f6f78502745"
+      },
+      "tests/test_pre_match_audit.py": {
+        "sha256": "5d134d2a1ba59db690db05479483bc4876bd165765c4b0f3b35551811f2f38e3"
+      },
+      "tests/test_prepare_source_tables.py": {
+        "sha256": "fad5ac57d3d2222e14f06ac24ef54bb56b4df7f726511388a564da8ef4ec0c64"
+      },
+      "tests/test_raw_profile.py": {
+        "sha256": "0708782d722a26ff012bd9005ef78c7bb60ba4335d3580fb762048671d4ca1ba"
+      }
+    }
+  },
+  "validation": {
+    "unique_source_grains_verified": true,
+    "accepted_sets_fully_represented": true,
+    "raw_lyrics_preserved": true,
+    "comparison_did_not_change_original_content": true,
+    "prior_candidate_counts_agree": true,
+    "parquet_roundtrips_passed": true,
+    "protected_files_unchanged": true,
+    "protected_file_count": 85,
+    "outcomes_used_only_for_reporting": true,
+    "no_fuzzy_matching": true,
+    "no_nlp_feature_extraction": true,
+    "no_modelling": true
+  }
+}
