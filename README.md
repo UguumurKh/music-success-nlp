@@ -1,5 +1,9 @@
 # Do Lyrics Matter for Music Success?
 
+The latest presentation comparison includes centered PCA (eleven model families).
+See the [final teammate handover](HANDOVER_PREPROCESSING_II.md) for authoritative
+v3 reports, private OneDrive transfer folders and reproduction/path requirements.
+
 ## Current update: Preprocessing II (15 November 2026)
 
 The project now includes matched 2000–2022 data and an executed nine-family
