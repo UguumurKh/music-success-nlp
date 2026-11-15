@@ -1,5 +1,34 @@
 # Do Lyrics Matter for Music Success?
 
+## Current update: Preprocessing II (15 November 2026)
+
+The project now includes matched 2000–2022 data and an executed nine-family
+grouped prediction analysis. The Phase 2A documentation below is historical.
+The current question is whether lyric-derived features improve Billboard
+Top-10 prediction beyond audio among Billboard-charting songs.
+
+- Branch: `preprocessing-ii-update`; no push or merge is part of this update.
+- [Preprocessing summary](reports/preprocessing_ii_20261115/01_preprocessing_summary.md)
+- [Actual analysis results](reports/preprocessing_ii_20261115/04_analysis_update.md)
+- [Methods and reproduction](reports/preprocessing_ii_20261115/02_methods_and_reproduction.md)
+- [Twelve-minute presentation outline](reports/preprocessing_ii_20261115/05_presentation_12_minutes.md)
+- Private submission: `data/processed/preprocessing_ii_20261115_v2/submission/`.
+  Contains complete lyrics and must remain Git-ignored. Project members must
+  review explanatory materials and the sample before manually uploading.
+
+```powershell
+uv sync --locked
+uv run python -m unittest discover -s tests -v
+uv run python src/14_preprocessing_ii_analysis.py --output data/processed/preprocessing_ii_reproduction
+uv run python src/15_package_preprocessing_ii.py --run data/processed/preprocessing_ii_reproduction
+```
+
+Existing inputs, historical results, language eligibility and folds are preserved.
+Stage 14 refuses to overwrite an existing run. No upstream matching stage needs
+to be rerun. Stage 15 packages verified outputs without refitting models.
+
+## Historical Phase 2A documentation
+
 An NLP group project investigating whether lyrics help explain music success.
 The eventual analysis period is 2000–2024, with one unique song–artist combination
 as the intended unit of analysis. The current stage is **Phase 2A: separate,
