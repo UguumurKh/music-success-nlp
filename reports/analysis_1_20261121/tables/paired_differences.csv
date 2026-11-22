@@ -1,0 +1,36 @@
+comparison,fold,ap_difference,roc_auc_difference
+Audio + simple lyrics minus Audio,1,0.027209522882677972,0.053080253080253104
+Audio + simple lyrics minus Audio,2,0.03887096800970807,0.027451940959275722
+Audio + simple lyrics minus Audio,3,0.013265858586723911,0.027847794021546246
+Audio + simple lyrics minus Audio,4,0.053131960828202734,0.0381864085840522
+Audio + simple lyrics minus Audio,5,0.019073438730663445,0.0323062343853201
+Audio + simple lyrics + NMF minus Audio + simple lyrics,1,0.024356806881200177,0.02974168688454404
+Audio + simple lyrics + NMF minus Audio + simple lyrics,2,-0.0005879008217556381,0.012641863756361782
+Audio + simple lyrics + NMF minus Audio + simple lyrics,3,0.024026416434191067,0.024561698314008895
+Audio + simple lyrics + NMF minus Audio + simple lyrics,4,0.048191684414014724,0.02112063194537417
+Audio + simple lyrics + NMF minus Audio + simple lyrics,5,0.02083992243928101,-0.00027280820147612683
+Audio + simple lyrics + cumulative SD minus Audio + simple lyrics,1,0.0000390651912151041,0.00003805718091420829
+Audio + simple lyrics + cumulative SD minus Audio + simple lyrics,2,0.001660082225018289,-0.0010750347004871985
+Audio + simple lyrics + cumulative SD minus Audio + simple lyrics,3,-0.0015950536113276126,-0.0003640844675963928
+Audio + simple lyrics + cumulative SD minus Audio + simple lyrics,4,0.00007394464072879581,0.00022473844270598509
+Audio + simple lyrics + cumulative SD minus Audio + simple lyrics,5,0.00040906823881914356,-0.00013879715513687163
+Audio + simple lyrics + cumulative SD + NMF minus Audio + simple lyrics + NMF,1,0.0006453503758898638,-0.0009276437847866026
+Audio + simple lyrics + cumulative SD + NMF minus Audio + simple lyrics + NMF,2,0.000027568311614989405,-0.00008164820510037085
+Audio + simple lyrics + cumulative SD + NMF minus Audio + simple lyrics + NMF,3,0.00043250119306698087,0.0003220747213352748
+Audio + simple lyrics + cumulative SD + NMF minus Audio + simple lyrics + NMF,4,0.0006509130037654631,-0.00016257674578745718
+Audio + simple lyrics + cumulative SD + NMF minus Audio + simple lyrics + NMF,5,-0.0003062725967405977,0.00027280820147623785
+Audio + simple lyrics minus Without p2_log_word_count,1,0.006699825028398498,0.014804243375671988
+Audio + simple lyrics minus Without p2_log_word_count,2,0.010146233447396402,0.006354951963639444
+Audio + simple lyrics minus Without p2_log_word_count,3,-0.00408656606442781,-0.004555723594540595
+Audio + simple lyrics minus Without p2_log_word_count,4,0.027847346564355224,0.012896161276131801
+Audio + simple lyrics minus Without p2_log_word_count,5,0.011615451748749284,0.01825421895490531
+Audio + simple lyrics minus Without p2_line_repetition,1,0.017345224153226313,0.030655059226487813
+Audio + simple lyrics minus Without p2_line_repetition,2,0.029195100840636035,0.02373241161581796
+Audio + simple lyrics minus Without p2_line_repetition,3,0.00962640908666429,0.02090218263970578
+Audio + simple lyrics minus Without p2_line_repetition,4,0.009186171796658538,0.018304228908058162
+Audio + simple lyrics minus Without p2_line_repetition,5,0.002719504356298613,0.010945830820626168
+Audio + simple lyrics minus Without p2_sentiment,1,0.003560016690888901,0.006441177869749293
+Audio + simple lyrics minus Without p2_sentiment,2,-0.002828458223096797,-0.004649411679322091
+Audio + simple lyrics minus Without p2_sentiment,3,0.009052894089799313,0.0015730316099999975
+Audio + simple lyrics minus Without p2_sentiment,4,0.0032926246593433794,0.0005403285962932713
+Audio + simple lyrics minus Without p2_sentiment,5,0.0014822744396022491,0.0028620930610995243

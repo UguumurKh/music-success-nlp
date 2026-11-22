@@ -1,0 +1,371 @@
+fold,model,feature,standardized_coefficient
+1,Audio + simple lyrics + cumulative SD,danceability_median,0.22593862298299833
+1,Audio + simple lyrics + cumulative SD,energy_median,-0.24421302157008395
+1,Audio + simple lyrics + cumulative SD,loudness_median,0.2034129840114032
+1,Audio + simple lyrics + cumulative SD,speechiness_median,-0.09013074095533444
+1,Audio + simple lyrics + cumulative SD,acousticness_median,-0.052121793710827063
+1,Audio + simple lyrics + cumulative SD,instrumentalness_median,0.0426339857923024
+1,Audio + simple lyrics + cumulative SD,liveness_median,-0.02219726551790912
+1,Audio + simple lyrics + cumulative SD,valence_median,0.1327862492905962
+1,Audio + simple lyrics + cumulative SD,tempo_median,-0.03671186495463234
+1,Audio + simple lyrics + cumulative SD,duration_ms_median,0.10523021090100339
+1,Audio + simple lyrics + cumulative SD,p2_log_word_count,0.3502597622194416
+1,Audio + simple lyrics + cumulative SD,p2_line_repetition,0.3135385632096664
+1,Audio + simple lyrics + cumulative SD,p2_sentiment,0.08415423434806771
+1,Audio + simple lyrics + cumulative SD,cumulative_mean_sd,-0.0011552194123503003
+1,Audio + simple lyrics + cumulative SD + NMF,danceability_median,0.3021077725532551
+1,Audio + simple lyrics + cumulative SD + NMF,energy_median,-0.24810210530354856
+1,Audio + simple lyrics + cumulative SD + NMF,loudness_median,0.18488117176279875
+1,Audio + simple lyrics + cumulative SD + NMF,speechiness_median,0.02440324670680184
+1,Audio + simple lyrics + cumulative SD + NMF,acousticness_median,-0.07863053119701473
+1,Audio + simple lyrics + cumulative SD + NMF,instrumentalness_median,0.0537939325753098
+1,Audio + simple lyrics + cumulative SD + NMF,liveness_median,-0.02193938229392075
+1,Audio + simple lyrics + cumulative SD + NMF,valence_median,0.09481164808888763
+1,Audio + simple lyrics + cumulative SD + NMF,tempo_median,-0.006195536126504654
+1,Audio + simple lyrics + cumulative SD + NMF,duration_ms_median,0.026831152366740996
+1,Audio + simple lyrics + cumulative SD + NMF,p2_log_word_count,0.4865047879416777
+1,Audio + simple lyrics + cumulative SD + NMF,p2_line_repetition,0.2644624962925333
+1,Audio + simple lyrics + cumulative SD + NMF,p2_sentiment,0.005411046955995374
+1,Audio + simple lyrics + cumulative SD + NMF,cumulative_mean_sd,0.02935680015293307
+1,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_1,0.14558960321697434
+1,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_2,0.09867683889214213
+1,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_3,-0.32001862842050777
+1,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_4,0.05709280423125294
+1,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_5,0.11419419065066068
+1,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_6,0.017081918256282958
+1,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_7,-0.045513579442533626
+1,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_8,0.018133568173176934
+1,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_9,0.020823464637294592
+1,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_10,0.017001873047179407
+1,Without p2_log_word_count,danceability_median,0.3550972945400966
+1,Without p2_log_word_count,energy_median,-0.2428494673776519
+1,Without p2_log_word_count,loudness_median,0.2441653171853303
+1,Without p2_log_word_count,speechiness_median,0.05766884503592976
+1,Without p2_log_word_count,acousticness_median,-0.07308595351993928
+1,Without p2_log_word_count,instrumentalness_median,0.004458443861810849
+1,Without p2_log_word_count,liveness_median,-0.006449148639467943
+1,Without p2_log_word_count,valence_median,0.1389484466833622
+1,Without p2_log_word_count,tempo_median,-0.03400098704465949
+1,Without p2_log_word_count,duration_ms_median,0.2221776692482947
+1,Without p2_log_word_count,p2_line_repetition,0.30718714454518314
+1,Without p2_log_word_count,p2_sentiment,0.07218006346791689
+1,Without p2_line_repetition,danceability_median,0.22117016114277013
+1,Without p2_line_repetition,energy_median,-0.20825728424179055
+1,Without p2_line_repetition,loudness_median,0.21230973202750716
+1,Without p2_line_repetition,speechiness_median,-0.16046610962578967
+1,Without p2_line_repetition,acousticness_median,-0.08013381002412381
+1,Without p2_line_repetition,instrumentalness_median,0.0626659157162813
+1,Without p2_line_repetition,liveness_median,-0.03289413119051001
+1,Without p2_line_repetition,valence_median,0.16370485186709613
+1,Without p2_line_repetition,tempo_median,-0.03669565874924316
+1,Without p2_line_repetition,duration_ms_median,0.10156538068154572
+1,Without p2_line_repetition,p2_log_word_count,0.3413458676314216
+1,Without p2_line_repetition,p2_sentiment,0.09184989614431666
+1,Without p2_sentiment,danceability_median,0.21495277992265738
+1,Without p2_sentiment,energy_median,-0.2476629551406571
+1,Without p2_sentiment,loudness_median,0.2021711627430894
+1,Without p2_sentiment,speechiness_median,-0.10568773526040448
+1,Without p2_sentiment,acousticness_median,-0.04713173537979139
+1,Without p2_sentiment,instrumentalness_median,0.03834211133333834
+1,Without p2_sentiment,liveness_median,-0.0236497611762447
+1,Without p2_sentiment,valence_median,0.1444892882085081
+1,Without p2_sentiment,tempo_median,-0.0393692978380448
+1,Without p2_sentiment,duration_ms_median,0.10772194122850076
+1,Without p2_sentiment,p2_log_word_count,0.3456499152246993
+1,Without p2_sentiment,p2_line_repetition,0.31472621848270094
+2,Audio + simple lyrics + cumulative SD,danceability_median,0.22161736857749711
+2,Audio + simple lyrics + cumulative SD,energy_median,-0.25243396867193196
+2,Audio + simple lyrics + cumulative SD,loudness_median,0.1846628458461713
+2,Audio + simple lyrics + cumulative SD,speechiness_median,-0.06322592901764237
+2,Audio + simple lyrics + cumulative SD,acousticness_median,-0.05382566712554581
+2,Audio + simple lyrics + cumulative SD,instrumentalness_median,0.005936959305584729
+2,Audio + simple lyrics + cumulative SD,liveness_median,0.00007458513444002842
+2,Audio + simple lyrics + cumulative SD,valence_median,0.08178136618219288
+2,Audio + simple lyrics + cumulative SD,tempo_median,-0.04554305753123
+2,Audio + simple lyrics + cumulative SD,duration_ms_median,0.13655211579428236
+2,Audio + simple lyrics + cumulative SD,p2_log_word_count,0.35755349715445206
+2,Audio + simple lyrics + cumulative SD,p2_line_repetition,0.3011532817747904
+2,Audio + simple lyrics + cumulative SD,p2_sentiment,0.12979457259075147
+2,Audio + simple lyrics + cumulative SD,cumulative_mean_sd,-0.027532850205620463
+2,Audio + simple lyrics + cumulative SD + NMF,danceability_median,0.30968732504419283
+2,Audio + simple lyrics + cumulative SD + NMF,energy_median,-0.2622048864273781
+2,Audio + simple lyrics + cumulative SD + NMF,loudness_median,0.17079575175650188
+2,Audio + simple lyrics + cumulative SD + NMF,speechiness_median,0.0701803439817568
+2,Audio + simple lyrics + cumulative SD + NMF,acousticness_median,-0.08676731134987538
+2,Audio + simple lyrics + cumulative SD + NMF,instrumentalness_median,0.020576460342951856
+2,Audio + simple lyrics + cumulative SD + NMF,liveness_median,0.00429292892331227
+2,Audio + simple lyrics + cumulative SD + NMF,valence_median,0.038052778183278166
+2,Audio + simple lyrics + cumulative SD + NMF,tempo_median,-0.016642642985124228
+2,Audio + simple lyrics + cumulative SD + NMF,duration_ms_median,0.06116198612115616
+2,Audio + simple lyrics + cumulative SD + NMF,p2_log_word_count,0.5060786241554217
+2,Audio + simple lyrics + cumulative SD + NMF,p2_line_repetition,0.254622540681545
+2,Audio + simple lyrics + cumulative SD + NMF,p2_sentiment,0.015223025017084798
+2,Audio + simple lyrics + cumulative SD + NMF,cumulative_mean_sd,-0.00288284810877203
+2,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_1,0.1814890771628474
+2,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_2,0.09070422772130352
+2,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_3,-0.39403459527848705
+2,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_4,0.09173086140731065
+2,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_5,0.12120600002064011
+2,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_6,0.026985835088417218
+2,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_7,0.045141732966208915
+2,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_8,0.04581181364654929
+2,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_9,0.014840385133062413
+2,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_10,-0.004366854838864961
+2,Without p2_log_word_count,danceability_median,0.34839395672993967
+2,Without p2_log_word_count,energy_median,-0.2592136532677043
+2,Without p2_log_word_count,loudness_median,0.2232569628407582
+2,Without p2_log_word_count,speechiness_median,0.07976215841374999
+2,Without p2_log_word_count,acousticness_median,-0.07860402691624271
+2,Without p2_log_word_count,instrumentalness_median,-0.050687939759896335
+2,Without p2_log_word_count,liveness_median,0.015624150079581046
+2,Without p2_log_word_count,valence_median,0.09914105663007294
+2,Without p2_log_word_count,tempo_median,-0.04052623491830563
+2,Without p2_log_word_count,duration_ms_median,0.2575287510261589
+2,Without p2_log_word_count,p2_line_repetition,0.29343838395012595
+2,Without p2_log_word_count,p2_sentiment,0.1132930691579664
+2,Without p2_line_repetition,danceability_median,0.21899925709150111
+2,Without p2_line_repetition,energy_median,-0.21154433806309
+2,Without p2_line_repetition,loudness_median,0.18446874359829651
+2,Without p2_line_repetition,speechiness_median,-0.12687613609000475
+2,Without p2_line_repetition,acousticness_median,-0.0781331653470524
+2,Without p2_line_repetition,instrumentalness_median,0.02155432507642861
+2,Without p2_line_repetition,liveness_median,-0.012509173622239089
+2,Without p2_line_repetition,valence_median,0.10326021238089116
+2,Without p2_line_repetition,tempo_median,-0.048977339787059364
+2,Without p2_line_repetition,duration_ms_median,0.13704862479742902
+2,Without p2_line_repetition,p2_log_word_count,0.34531124330364676
+2,Without p2_line_repetition,p2_sentiment,0.13836444096432018
+2,Without p2_sentiment,danceability_median,0.20420379093752464
+2,Without p2_sentiment,energy_median,-0.25331519368041777
+2,Without p2_sentiment,loudness_median,0.18031858933177589
+2,Without p2_sentiment,speechiness_median,-0.08577692751640889
+2,Without p2_sentiment,acousticness_median,-0.049929084385251774
+2,Without p2_sentiment,instrumentalness_median,0.0008017871771762052
+2,Without p2_sentiment,liveness_median,-0.003895734645244341
+2,Without p2_sentiment,valence_median,0.09973885491997027
+2,Without p2_sentiment,tempo_median,-0.052309490024678364
+2,Without p2_sentiment,duration_ms_median,0.146475511850639
+2,Without p2_sentiment,p2_log_word_count,0.3476418758707341
+2,Without p2_sentiment,p2_line_repetition,0.3074402551289179
+3,Audio + simple lyrics + cumulative SD,danceability_median,0.20005747447308578
+3,Audio + simple lyrics + cumulative SD,energy_median,-0.2590571793919456
+3,Audio + simple lyrics + cumulative SD,loudness_median,0.197384943990163
+3,Audio + simple lyrics + cumulative SD,speechiness_median,-0.07864161941360995
+3,Audio + simple lyrics + cumulative SD,acousticness_median,-0.10816890547197455
+3,Audio + simple lyrics + cumulative SD,instrumentalness_median,0.014035039615174163
+3,Audio + simple lyrics + cumulative SD,liveness_median,-0.002574098938458883
+3,Audio + simple lyrics + cumulative SD,valence_median,0.10471898670343172
+3,Audio + simple lyrics + cumulative SD,tempo_median,-0.02868186389456605
+3,Audio + simple lyrics + cumulative SD,duration_ms_median,0.095361332584105
+3,Audio + simple lyrics + cumulative SD,p2_log_word_count,0.40804594322193943
+3,Audio + simple lyrics + cumulative SD,p2_line_repetition,0.32526696645152736
+3,Audio + simple lyrics + cumulative SD,p2_sentiment,0.09347956720759776
+3,Audio + simple lyrics + cumulative SD,cumulative_mean_sd,-0.017565818464761438
+3,Audio + simple lyrics + cumulative SD + NMF,danceability_median,0.2706851661623322
+3,Audio + simple lyrics + cumulative SD + NMF,energy_median,-0.26209659211756725
+3,Audio + simple lyrics + cumulative SD + NMF,loudness_median,0.17764002415360067
+3,Audio + simple lyrics + cumulative SD + NMF,speechiness_median,0.03604322112785664
+3,Audio + simple lyrics + cumulative SD + NMF,acousticness_median,-0.1391989964906083
+3,Audio + simple lyrics + cumulative SD + NMF,instrumentalness_median,0.02469226081317457
+3,Audio + simple lyrics + cumulative SD + NMF,liveness_median,-0.0018104562026383367
+3,Audio + simple lyrics + cumulative SD + NMF,valence_median,0.08002461592490336
+3,Audio + simple lyrics + cumulative SD + NMF,tempo_median,-0.00024065082365093003
+3,Audio + simple lyrics + cumulative SD + NMF,duration_ms_median,0.022490393718630024
+3,Audio + simple lyrics + cumulative SD + NMF,p2_log_word_count,0.5434549080061951
+3,Audio + simple lyrics + cumulative SD + NMF,p2_line_repetition,0.28381631345190583
+3,Audio + simple lyrics + cumulative SD + NMF,p2_sentiment,-0.010400459393740074
+3,Audio + simple lyrics + cumulative SD + NMF,cumulative_mean_sd,0.007558548809576644
+3,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_1,0.16522782694865673
+3,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_2,0.07117893794333748
+3,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_3,-0.33534629626531587
+3,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_4,0.03447533096033869
+3,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_5,0.06198526697969006
+3,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_6,0.1177059058108387
+3,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_7,0.027180240138503488
+3,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_8,0.0595634308907755
+3,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_9,-0.015212367281548528
+3,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_10,-0.0035552840166728278
+3,Without p2_log_word_count,danceability_median,0.34133994610280954
+3,Without p2_log_word_count,energy_median,-0.25584843765700044
+3,Without p2_log_word_count,loudness_median,0.24498983102528862
+3,Without p2_log_word_count,speechiness_median,0.0880485523015151
+3,Without p2_log_word_count,acousticness_median,-0.1282106820790734
+3,Without p2_log_word_count,instrumentalness_median,-0.04921214974669673
+3,Without p2_log_word_count,liveness_median,0.01682195262188092
+3,Without p2_log_word_count,valence_median,0.1161835904033704
+3,Without p2_log_word_count,tempo_median,-0.02687713859781841
+3,Without p2_log_word_count,duration_ms_median,0.23758470193043862
+3,Without p2_log_word_count,p2_line_repetition,0.31426589261960597
+3,Without p2_log_word_count,p2_sentiment,0.07467117838105895
+3,Without p2_line_repetition,danceability_median,0.19876871605805105
+3,Without p2_line_repetition,energy_median,-0.21998260646653497
+3,Without p2_line_repetition,loudness_median,0.20271534597133306
+3,Without p2_line_repetition,speechiness_median,-0.14704249347734358
+3,Without p2_line_repetition,acousticness_median,-0.13531377172453907
+3,Without p2_line_repetition,instrumentalness_median,0.029383916398517083
+3,Without p2_line_repetition,liveness_median,-0.015122129848001596
+3,Without p2_line_repetition,valence_median,0.13155281490801002
+3,Without p2_line_repetition,tempo_median,-0.030222825586513995
+3,Without p2_line_repetition,duration_ms_median,0.09396499150528982
+3,Without p2_line_repetition,p2_log_word_count,0.39104244800172305
+3,Without p2_line_repetition,p2_sentiment,0.10732600313596882
+3,Without p2_sentiment,danceability_median,0.18715415041155775
+3,Without p2_sentiment,energy_median,-0.26206810685397136
+3,Without p2_sentiment,loudness_median,0.19629387373621207
+3,Without p2_sentiment,speechiness_median,-0.09635178319099603
+3,Without p2_sentiment,acousticness_median,-0.10402251971443567
+3,Without p2_sentiment,instrumentalness_median,0.009678187588983018
+3,Without p2_sentiment,liveness_median,-0.0063173766103935
+3,Without p2_sentiment,valence_median,0.11785103562909906
+3,Without p2_sentiment,tempo_median,-0.032484847258308316
+3,Without p2_sentiment,duration_ms_median,0.10254576675252874
+3,Without p2_sentiment,p2_log_word_count,0.4013422285262607
+3,Without p2_sentiment,p2_line_repetition,0.3309726284135998
+4,Audio + simple lyrics + cumulative SD,danceability_median,0.23092006586733288
+4,Audio + simple lyrics + cumulative SD,energy_median,-0.1910244097674708
+4,Audio + simple lyrics + cumulative SD,loudness_median,0.1415416208886229
+4,Audio + simple lyrics + cumulative SD,speechiness_median,-0.05793401216056111
+4,Audio + simple lyrics + cumulative SD,acousticness_median,-0.06091299735834371
+4,Audio + simple lyrics + cumulative SD,instrumentalness_median,-0.0076971953621600454
+4,Audio + simple lyrics + cumulative SD,liveness_median,-0.04080108280390903
+4,Audio + simple lyrics + cumulative SD,valence_median,0.09599422066604768
+4,Audio + simple lyrics + cumulative SD,tempo_median,-0.011867592872614676
+4,Audio + simple lyrics + cumulative SD,duration_ms_median,0.13944897064745962
+4,Audio + simple lyrics + cumulative SD,p2_log_word_count,0.32468717129694774
+4,Audio + simple lyrics + cumulative SD,p2_line_repetition,0.31571135752479235
+4,Audio + simple lyrics + cumulative SD,p2_sentiment,0.10405994327807026
+4,Audio + simple lyrics + cumulative SD,cumulative_mean_sd,-0.004355022588649936
+4,Audio + simple lyrics + cumulative SD + NMF,danceability_median,0.3057542840291593
+4,Audio + simple lyrics + cumulative SD + NMF,energy_median,-0.19339837763940468
+4,Audio + simple lyrics + cumulative SD + NMF,loudness_median,0.11947599007334543
+4,Audio + simple lyrics + cumulative SD + NMF,speechiness_median,0.06979827128506459
+4,Audio + simple lyrics + cumulative SD + NMF,acousticness_median,-0.08667000341778369
+4,Audio + simple lyrics + cumulative SD + NMF,instrumentalness_median,0.011214463312724509
+4,Audio + simple lyrics + cumulative SD + NMF,liveness_median,-0.03548639109257121
+4,Audio + simple lyrics + cumulative SD + NMF,valence_median,0.06563410033995892
+4,Audio + simple lyrics + cumulative SD + NMF,tempo_median,0.014367809833929207
+4,Audio + simple lyrics + cumulative SD + NMF,duration_ms_median,0.07268318454347521
+4,Audio + simple lyrics + cumulative SD + NMF,p2_log_word_count,0.4534249842166959
+4,Audio + simple lyrics + cumulative SD + NMF,p2_line_repetition,0.2763397113065587
+4,Audio + simple lyrics + cumulative SD + NMF,p2_sentiment,-0.004496336919320042
+4,Audio + simple lyrics + cumulative SD + NMF,cumulative_mean_sd,0.018053993062785545
+4,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_1,0.18099959365633642
+4,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_2,0.07748707643571426
+4,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_3,-0.3402093088933701
+4,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_4,0.11146238749928185
+4,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_5,0.032165192262651736
+4,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_6,0.03823642559875256
+4,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_7,0.05584971307531171
+4,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_8,0.04987004225618251
+4,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_9,0.03743701899783675
+4,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_10,0.010921586603108189
+4,Without p2_log_word_count,danceability_median,0.3469856458630541
+4,Without p2_log_word_count,energy_median,-0.1918616795434531
+4,Without p2_log_word_count,loudness_median,0.17782785483323116
+4,Without p2_log_word_count,speechiness_median,0.07399630990329692
+4,Without p2_log_word_count,acousticness_median,-0.07749599519256863
+4,Without p2_log_word_count,instrumentalness_median,-0.05763035280299804
+4,Without p2_log_word_count,liveness_median,-0.026363096609487397
+4,Without p2_log_word_count,valence_median,0.10570881492559298
+4,Without p2_log_word_count,tempo_median,-0.00902195485176446
+4,Without p2_log_word_count,duration_ms_median,0.2488401707403827
+4,Without p2_log_word_count,p2_line_repetition,0.3065295957528217
+4,Without p2_log_word_count,p2_sentiment,0.08965454255596234
+4,Without p2_line_repetition,danceability_median,0.23303588753366491
+4,Without p2_line_repetition,energy_median,-0.15531425601993862
+4,Without p2_line_repetition,loudness_median,0.14678383598960584
+4,Without p2_line_repetition,speechiness_median,-0.13192304059957324
+4,Without p2_line_repetition,acousticness_median,-0.09372679630908766
+4,Without p2_line_repetition,instrumentalness_median,0.01654825354903
+4,Without p2_line_repetition,liveness_median,-0.0522300648037504
+4,Without p2_line_repetition,valence_median,0.12440735521381519
+4,Without p2_line_repetition,tempo_median,-0.012809141345416296
+4,Without p2_line_repetition,duration_ms_median,0.14085104869863227
+4,Without p2_line_repetition,p2_log_word_count,0.30780522232972274
+4,Without p2_line_repetition,p2_sentiment,0.11502917810138821
+4,Without p2_sentiment,danceability_median,0.21659175706723569
+4,Without p2_sentiment,energy_median,-0.19684768596269925
+4,Without p2_sentiment,loudness_median,0.13968755407016578
+4,Without p2_sentiment,speechiness_median,-0.07587157227309635
+4,Without p2_sentiment,acousticness_median,-0.05920367322834492
+4,Without p2_sentiment,instrumentalness_median,-0.012621604091388244
+4,Without p2_sentiment,liveness_median,-0.04391489200160992
+4,Without p2_sentiment,valence_median,0.11191022921156855
+4,Without p2_sentiment,tempo_median,-0.016231915232754135
+4,Without p2_sentiment,duration_ms_median,0.14581443769331368
+4,Without p2_sentiment,p2_log_word_count,0.31460474373221387
+4,Without p2_sentiment,p2_line_repetition,0.3199885108384167
+5,Audio + simple lyrics + cumulative SD,danceability_median,0.15667666762491367
+5,Audio + simple lyrics + cumulative SD,energy_median,-0.3174255512416563
+5,Audio + simple lyrics + cumulative SD,loudness_median,0.24349447230511378
+5,Audio + simple lyrics + cumulative SD,speechiness_median,-0.04244353665626735
+5,Audio + simple lyrics + cumulative SD,acousticness_median,-0.0981614131630889
+5,Audio + simple lyrics + cumulative SD,instrumentalness_median,-0.00830499658813301
+5,Audio + simple lyrics + cumulative SD,liveness_median,-0.018240800605907343
+5,Audio + simple lyrics + cumulative SD,valence_median,0.1388795159392901
+5,Audio + simple lyrics + cumulative SD,tempo_median,-0.05817153812451387
+5,Audio + simple lyrics + cumulative SD,duration_ms_median,0.16757026194131242
+5,Audio + simple lyrics + cumulative SD,p2_log_word_count,0.3312997680476286
+5,Audio + simple lyrics + cumulative SD,p2_line_repetition,0.340399707769963
+5,Audio + simple lyrics + cumulative SD,p2_sentiment,0.10310058275226838
+5,Audio + simple lyrics + cumulative SD,cumulative_mean_sd,-0.012284911869258596
+5,Audio + simple lyrics + cumulative SD + NMF,danceability_median,0.24963346293900232
+5,Audio + simple lyrics + cumulative SD + NMF,energy_median,-0.32159178394300414
+5,Audio + simple lyrics + cumulative SD + NMF,loudness_median,0.22549618312771932
+5,Audio + simple lyrics + cumulative SD + NMF,speechiness_median,0.0951222370917268
+5,Audio + simple lyrics + cumulative SD + NMF,acousticness_median,-0.13972532974424456
+5,Audio + simple lyrics + cumulative SD + NMF,instrumentalness_median,0.006010695398952542
+5,Audio + simple lyrics + cumulative SD + NMF,liveness_median,-0.01213130647214801
+5,Audio + simple lyrics + cumulative SD + NMF,valence_median,0.09481737813656108
+5,Audio + simple lyrics + cumulative SD + NMF,tempo_median,-0.034945123587756116
+5,Audio + simple lyrics + cumulative SD + NMF,duration_ms_median,0.09465084808175753
+5,Audio + simple lyrics + cumulative SD + NMF,p2_log_word_count,0.47162875105445795
+5,Audio + simple lyrics + cumulative SD + NMF,p2_line_repetition,0.2994706100794609
+5,Audio + simple lyrics + cumulative SD + NMF,p2_sentiment,0.010123630361603981
+5,Audio + simple lyrics + cumulative SD + NMF,cumulative_mean_sd,0.013034272501929444
+5,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_1,0.2024253607258299
+5,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_2,0.07687176130236287
+5,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_3,-0.35757049235881755
+5,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_4,0.12323645526614058
+5,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_5,0.0955556829060206
+5,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_6,0.023574849472344662
+5,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_7,-0.01072985755054289
+5,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_8,0.04811844147914418
+5,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_9,0.00948239919012526
+5,Audio + simple lyrics + cumulative SD + NMF,fold_specific_NMF_10,0.040135361480494056
+5,Without p2_log_word_count,danceability_median,0.2788636467081007
+5,Without p2_log_word_count,energy_median,-0.3162332636402599
+5,Without p2_log_word_count,loudness_median,0.2838405845763937
+5,Without p2_log_word_count,speechiness_median,0.09206501225626659
+5,Without p2_log_word_count,acousticness_median,-0.11614929782251412
+5,Without p2_log_word_count,instrumentalness_median,-0.06437407003352476
+5,Without p2_log_word_count,liveness_median,-0.0019020843322302377
+5,Without p2_log_word_count,valence_median,0.14754208717494297
+5,Without p2_log_word_count,tempo_median,-0.057166527082607964
+5,Without p2_log_word_count,duration_ms_median,0.2779353993450295
+5,Without p2_log_word_count,p2_line_repetition,0.33692416103143036
+5,Without p2_log_word_count,p2_sentiment,0.08920279846333444
+5,Without p2_line_repetition,danceability_median,0.15947009283693095
+5,Without p2_line_repetition,energy_median,-0.2759237891471298
+5,Without p2_line_repetition,loudness_median,0.2500645720827653
+5,Without p2_line_repetition,speechiness_median,-0.11737921305613272
+5,Without p2_line_repetition,acousticness_median,-0.12626700845780092
+5,Without p2_line_repetition,instrumentalness_median,0.01601088291337903
+5,Without p2_line_repetition,liveness_median,-0.030660283249228704
+5,Without p2_line_repetition,valence_median,0.16898291939153115
+5,Without p2_line_repetition,tempo_median,-0.053009675679411804
+5,Without p2_line_repetition,duration_ms_median,0.16090586754869504
+5,Without p2_line_repetition,p2_log_word_count,0.32670242760255513
+5,Without p2_line_repetition,p2_sentiment,0.11272259416839574
+5,Without p2_sentiment,danceability_median,0.14647251481246734
+5,Without p2_sentiment,energy_median,-0.32074219902446305
+5,Without p2_sentiment,loudness_median,0.2412776998778822
+5,Without p2_sentiment,speechiness_median,-0.059803328082065926
+5,Without p2_sentiment,acousticness_median,-0.09514590478792288
+5,Without p2_sentiment,instrumentalness_median,-0.013511159098593833
+5,Without p2_sentiment,liveness_median,-0.021266828890411257
+5,Without p2_sentiment,valence_median,0.15448270816360543
+5,Without p2_sentiment,tempo_median,-0.06246698483874933
+5,Without p2_sentiment,duration_ms_median,0.17454929003244454
+5,Without p2_sentiment,p2_log_word_count,0.32368118733686974
+5,Without p2_sentiment,p2_line_repetition,0.3443676241825029
