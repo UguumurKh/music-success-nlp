@@ -1,0 +1,113 @@
+model,category,n,groups,max_records_per_group,feature,median,p25,p75
+Audio + simple lyrics + NMF,FP,10,10,1,danceability_median,0.865,0.807875,0.9067500000000001
+Audio + simple lyrics + NMF,FP,10,10,1,energy_median,0.5397500000000001,0.515,0.557
+Audio + simple lyrics + NMF,FP,10,10,1,loudness_median,-6.3865,-6.759375,-4.78675
+Audio + simple lyrics + NMF,FP,10,10,1,speechiness_median,0.185,0.0851875,0.22475
+Audio + simple lyrics + NMF,FP,10,10,1,acousticness_median,0.1275,0.0522375,0.237
+Audio + simple lyrics + NMF,FP,10,10,1,instrumentalness_median,0.0,0.0,0.000013261250000000001
+Audio + simple lyrics + NMF,FP,10,10,1,liveness_median,0.07830000000000001,0.0591,0.104875
+Audio + simple lyrics + NMF,FP,10,10,1,valence_median,0.6777500000000001,0.50825,0.7975
+Audio + simple lyrics + NMF,FP,10,10,1,tempo_median,112.25525,97.40625,124.767
+Audio + simple lyrics + NMF,FP,10,10,1,duration_ms_median,232153.5,213762.125,274582.0
+Audio + simple lyrics + NMF,FP,10,10,1,p2_log_word_count,6.53296634935046,6.516931629017322,6.65576065047213
+Audio + simple lyrics + NMF,FP,10,10,1,p2_line_repetition,0.5516409266409266,0.516477885652643,0.6316934404283802
+Audio + simple lyrics + NMF,FP,10,10,1,p2_sentiment,0.10263036067200823,0.0241903103561464,0.12778522004044274
+Audio + simple lyrics + NMF,FP,10,10,1,cumulative_mean_sd,0.022241673029679807,0.020261428168919158,0.05146316024828913
+Audio + simple lyrics + NMF,FN,973,547,31,danceability_median,0.6759999999999999,0.58,0.762
+Audio + simple lyrics + NMF,FN,973,547,31,energy_median,0.701,0.568,0.8015000000000001
+Audio + simple lyrics + NMF,FN,973,547,31,loudness_median,-5.5905000000000005,-6.872999999999999,-4.447
+Audio + simple lyrics + NMF,FN,973,547,31,speechiness_median,0.0629,0.0393,0.14
+Audio + simple lyrics + NMF,FN,973,547,31,acousticness_median,0.0687,0.0179,0.216
+Audio + simple lyrics + NMF,FN,973,547,31,instrumentalness_median,0.0,0.0,0.0000139
+Audio + simple lyrics + NMF,FN,973,547,31,liveness_median,0.129,0.09290000000000001,0.236
+Audio + simple lyrics + NMF,FN,973,547,31,valence_median,0.537,0.369,0.712
+Audio + simple lyrics + NMF,FN,973,547,31,tempo_median,120.001,98.02,139.9415
+Audio + simple lyrics + NMF,FN,973,547,31,duration_ms_median,225866.5,203216.5,248133.0
+Audio + simple lyrics + NMF,FN,973,547,31,p2_log_word_count,6.063785208687608,5.802118375377063,6.3473892096560105
+Audio + simple lyrics + NMF,FN,973,547,31,p2_line_repetition,0.36363636363636365,0.2702702702702703,0.46
+Audio + simple lyrics + NMF,FN,973,547,31,p2_sentiment,0.061819219219219214,-0.01143731587561375,0.1407384991843393
+Audio + simple lyrics + NMF,FN,973,547,31,cumulative_mean_sd,0.0602489483334378,0.04220615363944105,0.0862505212732747
+Audio + simple lyrics + NMF,TP,11,10,2,danceability_median,0.825,0.78325,0.8852500000000001
+Audio + simple lyrics + NMF,TP,11,10,2,energy_median,0.652,0.5377500000000001,0.722
+Audio + simple lyrics + NMF,TP,11,10,2,loudness_median,-5.02,-6.177,-3.58
+Audio + simple lyrics + NMF,TP,11,10,2,speechiness_median,0.0464,0.0411,0.0793
+Audio + simple lyrics + NMF,TP,11,10,2,acousticness_median,0.15,0.032549999999999996,0.20950000000000002
+Audio + simple lyrics + NMF,TP,11,10,2,instrumentalness_median,0.0,0.0,0.0000348
+Audio + simple lyrics + NMF,TP,11,10,2,liveness_median,0.08335000000000001,0.0759,0.0993
+Audio + simple lyrics + NMF,TP,11,10,2,valence_median,0.863,0.636,0.94675
+Audio + simple lyrics + NMF,TP,11,10,2,tempo_median,101.01400000000001,94.43925,115.549
+Audio + simple lyrics + NMF,TP,11,10,2,duration_ms_median,250747.0,239506.5,294110.0
+Audio + simple lyrics + NMF,TP,11,10,2,p2_log_word_count,6.542471960506805,6.312641427715005,6.640324178185021
+Audio + simple lyrics + NMF,TP,11,10,2,p2_line_repetition,0.5517241379310345,0.43600307624697865,0.590946615299945
+Audio + simple lyrics + NMF,TP,11,10,2,p2_sentiment,0.2352548192771084,0.15498511839583906,0.2545159298455124
+Audio + simple lyrics + NMF,TP,11,10,2,cumulative_mean_sd,0.05417295258161174,0.043902410809305355,0.0731340535839376
+Audio + simple lyrics + NMF,TN,5391,1871,103,danceability_median,0.617,0.521,0.72
+Audio + simple lyrics + NMF,TN,5391,1871,103,energy_median,0.698,0.562,0.816
+Audio + simple lyrics + NMF,TN,5391,1871,103,loudness_median,-5.714,-7.23875,-4.510999999999999
+Audio + simple lyrics + NMF,TN,5391,1871,103,speechiness_median,0.0525,0.035125,0.125
+Audio + simple lyrics + NMF,TN,5391,1871,103,acousticness_median,0.0862,0.0204,0.259
+Audio + simple lyrics + NMF,TN,5391,1871,103,instrumentalness_median,0.0,0.0,0.0000231
+Audio + simple lyrics + NMF,TN,5391,1871,103,liveness_median,0.128,0.0976,0.231
+Audio + simple lyrics + NMF,TN,5391,1871,103,valence_median,0.484,0.314,0.6579999999999999
+Audio + simple lyrics + NMF,TN,5391,1871,103,tempo_median,123.011,98.17949999999999,144.035
+Audio + simple lyrics + NMF,TN,5391,1871,103,duration_ms_median,217547.0,192717.0,244760.0
+Audio + simple lyrics + NMF,TN,5391,1871,103,p2_log_word_count,5.877735781779639,5.634789603169249,6.199493945267498
+Audio + simple lyrics + NMF,TN,5391,1871,103,p2_line_repetition,0.32653061224489793,0.22795913835220963,0.41935483870967744
+Audio + simple lyrics + NMF,TN,5391,1871,103,p2_sentiment,0.056745762711864406,-0.0149427403676375,0.13719240616018452
+Audio + simple lyrics + NMF,TN,5391,1871,103,cumulative_mean_sd,0.06380121832081144,0.04364254127600749,0.0896148504521132
+Audio + simple lyrics + cumulative SD + NMF,FP,10,10,1,danceability_median,0.865,0.807875,0.9067500000000001
+Audio + simple lyrics + cumulative SD + NMF,FP,10,10,1,energy_median,0.5397500000000001,0.515,0.557
+Audio + simple lyrics + cumulative SD + NMF,FP,10,10,1,loudness_median,-6.0585,-6.66,-4.78675
+Audio + simple lyrics + cumulative SD + NMF,FP,10,10,1,speechiness_median,0.185,0.0851875,0.22475
+Audio + simple lyrics + cumulative SD + NMF,FP,10,10,1,acousticness_median,0.09985,0.0522375,0.1765
+Audio + simple lyrics + cumulative SD + NMF,FP,10,10,1,instrumentalness_median,0.0,0.0,0.000012675
+Audio + simple lyrics + cumulative SD + NMF,FP,10,10,1,liveness_median,0.07600000000000001,0.056374999999999995,0.100975
+Audio + simple lyrics + cumulative SD + NMF,FP,10,10,1,valence_median,0.63275,0.46950000000000003,0.721625
+Audio + simple lyrics + cumulative SD + NMF,FP,10,10,1,tempo_median,112.25525,97.40625,124.767
+Audio + simple lyrics + cumulative SD + NMF,FP,10,10,1,duration_ms_median,232153.5,213762.125,287987.0
+Audio + simple lyrics + cumulative SD + NMF,FP,10,10,1,p2_log_word_count,6.519147287940395,6.484466291274947,6.65576065047213
+Audio + simple lyrics + cumulative SD + NMF,FP,10,10,1,p2_line_repetition,0.5516409266409266,0.516477885652643,0.6316934404283802
+Audio + simple lyrics + cumulative SD + NMF,FP,10,10,1,p2_sentiment,0.06110806976744186,0.013098892171344167,0.123522960267098
+Audio + simple lyrics + cumulative SD + NMF,FP,10,10,1,cumulative_mean_sd,0.028032272594964394,0.020606706625651776,0.05821542440195324
+Audio + simple lyrics + cumulative SD + NMF,FN,973,547,31,danceability_median,0.6759999999999999,0.58,0.762
+Audio + simple lyrics + cumulative SD + NMF,FN,973,547,31,energy_median,0.701,0.568,0.8015000000000001
+Audio + simple lyrics + cumulative SD + NMF,FN,973,547,31,loudness_median,-5.5905000000000005,-6.872999999999999,-4.447
+Audio + simple lyrics + cumulative SD + NMF,FN,973,547,31,speechiness_median,0.0629,0.0393,0.14
+Audio + simple lyrics + cumulative SD + NMF,FN,973,547,31,acousticness_median,0.0687,0.0179,0.216
+Audio + simple lyrics + cumulative SD + NMF,FN,973,547,31,instrumentalness_median,0.0,0.0,0.0000139
+Audio + simple lyrics + cumulative SD + NMF,FN,973,547,31,liveness_median,0.129,0.09290000000000001,0.236
+Audio + simple lyrics + cumulative SD + NMF,FN,973,547,31,valence_median,0.537,0.369,0.712
+Audio + simple lyrics + cumulative SD + NMF,FN,973,547,31,tempo_median,120.001,98.02,139.9415
+Audio + simple lyrics + cumulative SD + NMF,FN,973,547,31,duration_ms_median,225866.5,203216.5,248133.0
+Audio + simple lyrics + cumulative SD + NMF,FN,973,547,31,p2_log_word_count,6.063785208687608,5.802118375377063,6.3473892096560105
+Audio + simple lyrics + cumulative SD + NMF,FN,973,547,31,p2_line_repetition,0.36363636363636365,0.2702702702702703,0.46
+Audio + simple lyrics + cumulative SD + NMF,FN,973,547,31,p2_sentiment,0.061819219219219214,-0.01143731587561375,0.1407384991843393
+Audio + simple lyrics + cumulative SD + NMF,FN,973,547,31,cumulative_mean_sd,0.0602489483334378,0.04220615363944105,0.0862505212732747
+Audio + simple lyrics + cumulative SD + NMF,TP,11,10,2,danceability_median,0.825,0.78325,0.8852500000000001
+Audio + simple lyrics + cumulative SD + NMF,TP,11,10,2,energy_median,0.652,0.5377500000000001,0.722
+Audio + simple lyrics + cumulative SD + NMF,TP,11,10,2,loudness_median,-5.02,-6.177,-3.58
+Audio + simple lyrics + cumulative SD + NMF,TP,11,10,2,speechiness_median,0.0464,0.0411,0.0793
+Audio + simple lyrics + cumulative SD + NMF,TP,11,10,2,acousticness_median,0.15,0.032549999999999996,0.20950000000000002
+Audio + simple lyrics + cumulative SD + NMF,TP,11,10,2,instrumentalness_median,0.0,0.0,0.0000348
+Audio + simple lyrics + cumulative SD + NMF,TP,11,10,2,liveness_median,0.08335000000000001,0.0759,0.0993
+Audio + simple lyrics + cumulative SD + NMF,TP,11,10,2,valence_median,0.863,0.636,0.94675
+Audio + simple lyrics + cumulative SD + NMF,TP,11,10,2,tempo_median,101.01400000000001,94.43925,115.549
+Audio + simple lyrics + cumulative SD + NMF,TP,11,10,2,duration_ms_median,250747.0,239506.5,294110.0
+Audio + simple lyrics + cumulative SD + NMF,TP,11,10,2,p2_log_word_count,6.542471960506805,6.312641427715005,6.640324178185021
+Audio + simple lyrics + cumulative SD + NMF,TP,11,10,2,p2_line_repetition,0.5517241379310345,0.43600307624697865,0.590946615299945
+Audio + simple lyrics + cumulative SD + NMF,TP,11,10,2,p2_sentiment,0.2352548192771084,0.15498511839583906,0.2545159298455124
+Audio + simple lyrics + cumulative SD + NMF,TP,11,10,2,cumulative_mean_sd,0.05417295258161174,0.043902410809305355,0.0731340535839376
+Audio + simple lyrics + cumulative SD + NMF,TN,5391,1871,103,danceability_median,0.617,0.521,0.72
+Audio + simple lyrics + cumulative SD + NMF,TN,5391,1871,103,energy_median,0.698,0.562,0.816
+Audio + simple lyrics + cumulative SD + NMF,TN,5391,1871,103,loudness_median,-5.714,-7.23875,-4.510999999999999
+Audio + simple lyrics + cumulative SD + NMF,TN,5391,1871,103,speechiness_median,0.0525,0.035175,0.125
+Audio + simple lyrics + cumulative SD + NMF,TN,5391,1871,103,acousticness_median,0.0862,0.0204,0.259
+Audio + simple lyrics + cumulative SD + NMF,TN,5391,1871,103,instrumentalness_median,0.0,0.0,0.0000231
+Audio + simple lyrics + cumulative SD + NMF,TN,5391,1871,103,liveness_median,0.128,0.0976,0.231
+Audio + simple lyrics + cumulative SD + NMF,TN,5391,1871,103,valence_median,0.484,0.314,0.658
+Audio + simple lyrics + cumulative SD + NMF,TN,5391,1871,103,tempo_median,123.011,98.17949999999999,144.035
+Audio + simple lyrics + cumulative SD + NMF,TN,5391,1871,103,duration_ms_median,217547.0,192717.0,244760.0
+Audio + simple lyrics + cumulative SD + NMF,TN,5391,1871,103,p2_log_word_count,5.877735781779639,5.634789603169249,6.199493945267498
+Audio + simple lyrics + cumulative SD + NMF,TN,5391,1871,103,p2_line_repetition,0.32653061224489793,0.22795913835220963,0.41935483870967744
+Audio + simple lyrics + cumulative SD + NMF,TN,5391,1871,103,p2_sentiment,0.056754854368932045,-0.014865851647831007,0.13719240616018452
+Audio + simple lyrics + cumulative SD + NMF,TN,5391,1871,103,cumulative_mean_sd,0.06379094145291031,0.043625232867907815,0.08959370811239323

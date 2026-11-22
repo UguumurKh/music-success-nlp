@@ -1,0 +1,8 @@
+comparison,ap_difference,roc_auc_difference
+Audio + simple lyrics minus Audio,0.030310349807595227,0.03577452620608947
+Audio + simple lyrics + NMF minus Audio + simple lyrics,0.023365385869386267,0.01755861453976255
+Audio + simple lyrics + cumulative SD minus Audio + simple lyrics,0.00011742133689074397,-0.0002630241399200539
+Audio + simple lyrics + cumulative SD + NMF minus Audio + simple lyrics + NMF,0.0002900120575193399,-0.00011539716257258359
+Audio + simple lyrics minus Without p2_log_word_count,0.010444458144894319,0.00955077039516159
+Audio + simple lyrics minus Without p2_line_repetition,0.013614482046696758,0.020907942642139177
+Audio + simple lyrics minus Without p2_sentiment,0.002911870331307409,0.001353443891563999

@@ -1,0 +1,26 @@
+fold,model,intercept
+1,Audio + simple lyrics + cumulative SD,-1.83261143872668
+1,Audio + simple lyrics + cumulative SD + NMF,-1.8685650981544284
+1,Without p2_log_word_count,-1.8121185913795286
+1,Without p2_line_repetition,-1.8025664353251636
+1,Without p2_sentiment,-1.8291346876428953
+2,Audio + simple lyrics + cumulative SD,-1.83671739989239
+2,Audio + simple lyrics + cumulative SD + NMF,-1.887489614117716
+2,Without p2_log_word_count,-1.8146653640158732
+2,Without p2_line_repetition,-1.8078139866912442
+2,Without p2_sentiment,-1.830860126242474
+3,Audio + simple lyrics + cumulative SD,-1.8436684628957378
+3,Audio + simple lyrics + cumulative SD + NMF,-1.8821415281158576
+3,Without p2_log_word_count,-1.8156809894429575
+3,Without p2_line_repetition,-1.8109945155327882
+3,Without p2_sentiment,-1.8398794331760786
+4,Audio + simple lyrics + cumulative SD,-1.8210886296420292
+4,Audio + simple lyrics + cumulative SD + NMF,-1.8607209241908544
+4,Without p2_log_word_count,-1.8032106495986722
+4,Without p2_line_repetition,-1.7912323861050483
+4,Without p2_sentiment,-1.8174115154374522
+5,Audio + simple lyrics + cumulative SD,-1.837335495864152
+5,Audio + simple lyrics + cumulative SD + NMF,-1.8850472529378965
+5,Without p2_log_word_count,-1.8187820085976396
+5,Without p2_line_repetition,-1.8027251057694829
+5,Without p2_sentiment,-1.8335800814619096
